@@ -10,7 +10,7 @@
     alert('copied');
   }
 
-  function fetchCat() {
+  function fetchCats() {
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
@@ -51,5 +51,5 @@
 
   document.getElementById('footer-year').innerHTML = new Date().getFullYear();
 
-  fetchCat();
+  fetchCats();
 })();
