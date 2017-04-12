@@ -17,7 +17,7 @@
       if (xmlhttp.readyState == XMLHttpRequest.DONE) {
         if (xmlhttp.status == 200) {
           const res = JSON.parse(xmlhttp.response);
-          document.getElementById('img-cat-gif').src = res.data.image_url;
+          document.getElementById('img-cat-gif').src = res.data.image_url.replace('http://', 'https://');
         } else if (xmlhttp.status == 400) {
           // alert('There was an error 400');
         } else {
