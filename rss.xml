@@ -1,45 +1,1469 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[warizz.io]]></title><description><![CDATA[All public info of a man named Warizz]]></description><link>warizz.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 17 Jan 2019 08:42:34 GMT</lastBuildDate><item><title><![CDATA[On writing well]]></title><description><![CDATA[This post is aggregation of notes that I read about ‘how to write better’. Reference will be at the end of each note. StriverGuy…]]></description><link>warizz.io/on-writing-well/</link><guid isPermaLink="false">warizz.io/on-writing-well/</guid><content:encoded>&lt;p&gt;This post is aggregation of notes that I read about ‘how to write better’. Reference will be at the end of each note.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;StriverGuy&lt;/strong&gt; recommended 3 books and begin writing at least 500 words per day
-1 On Writing Well - William Zinser
-2 On Writing - Stephen King
-3 The Elements of Style - Strunk &amp;#x26; White
-He also gave an super interesting opinion&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[warizz.io]]></title><description><![CDATA[All public info of a man named Warizz]]></description><link>warizz.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 17 Jan 2019 13:14:42 GMT</lastBuildDate><item><title><![CDATA[Reading other people's code episode 2: Array.prototype.map]]></title><description><![CDATA[ is my one of the most frequently used JavaScript function. Source code Because this is polyfill source code so first few lines are about…]]></description><link>warizz.io/reading-other-people-code-ep-2/</link><guid isPermaLink="false">warizz.io/reading-other-people-code-ep-2/</guid><pubDate>Thu, 17 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.map&lt;/code&gt; is my one of the most frequently used JavaScript function.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map&quot;&gt;Source code&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Production steps of ECMA-262, Edition 5, 15.4.4.19&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// Reference: http://es5.github.io/#x15.4.4.19&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;Array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+  Array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;callback&lt;span class=&quot;token comment&quot;&gt;/*, thisArg*/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;this is null or not defined&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 1. Let O be the result of calling ToObject passing the |this|&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//    value as the argument.&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 2. Let lenValue be the result of calling the Get internal&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//    method of O with the argument &quot;length&quot;.&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 3. Let len be ToUint32(lenValue).&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 4. If IsCallable(callback) is false, throw a TypeError exception.&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// See: http://es5.github.com/#x9.11&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; callback &lt;span class=&quot;token operator&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;function&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;callback &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos; is not a function&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arguments&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; arguments&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 6. Let A be a new array created as if by the expression new Array(len)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//    where Array is the standard built-in constructor with that name and&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//    len is the value of len.&lt;/span&gt;
+    &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;len&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 7. Let k be 0&lt;/span&gt;
+    k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 8. Repeat, while k &amp;lt; len&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;k &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; len&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+      &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; kValue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mappedValue&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+      &lt;span class=&quot;token comment&quot;&gt;// a. Let Pk be ToString(k).&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;//   This is implicit for LHS operands of the in operator&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// b. Let kPresent be the result of calling the HasProperty internal&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;//    method of O with argument Pk.&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;//   This step can be combined with c&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// c. If kPresent is true, then&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;k &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// i. Let kValue be the result of calling the Get internal&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//    method of O with argument Pk.&lt;/span&gt;
+        kValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// ii. Let mappedValue be the result of calling the Call internal&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//     method of callback with T as the this value and argument&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//     list containing kValue, k, and O.&lt;/span&gt;
+        mappedValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; callback&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kValue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// iii. Call the DefineOwnProperty internal method of A with arguments&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// Pk, Property Descriptor&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// { Value: mappedValue,&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   Writable: true,&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   Enumerable: true,&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   Configurable: true },&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// and false.&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// In browsers that support Object.defineProperty, use the following:&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// Object.defineProperty(A, k, {&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   value: mappedValue,&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   writable: true,&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   enumerable: true,&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//   configurable: true&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// });&lt;/span&gt;
+
+        &lt;span class=&quot;token comment&quot;&gt;// For best browser support, use the following:&lt;/span&gt;
+        &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; mappedValue&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// d. Increase k by 1.&lt;/span&gt;
+      k&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// 9. return A&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Because this is polyfill source code so first few lines are about assigning &lt;code class=&quot;language-text&quot;&gt;map&lt;/code&gt; function to &lt;code class=&quot;language-text&quot;&gt;Array.prototype&lt;/code&gt;. The function receives &lt;code class=&quot;language-text&quot;&gt;callback&lt;/code&gt; as first argument. Second argument is &lt;code class=&quot;language-text&quot;&gt;thisArg&lt;/code&gt; but was commented out because later in the code it will be retrieved by using &lt;code class=&quot;language-text&quot;&gt;arguments[1]&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;Array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+  Array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;callback&lt;span class=&quot;token comment&quot;&gt;/*, thisArg*/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After are declaring empty variables and validation of &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; (another usage of &lt;code class=&quot;language-text&quot;&gt;== null&lt;/code&gt; for &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt; checking), statement &lt;code class=&quot;language-text&quot;&gt;var O = Object(this);&lt;/code&gt; make me curious why they have to do this.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;this is null or not defined&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 1. Let O be the result of calling ToObject passing the |this|&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//    value as the argument.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object&quot;&gt;MDN’s &lt;code class=&quot;language-text&quot;&gt;Object&lt;/code&gt; description&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The two most important points are concise style and active voice. Both of these habits are critical for SEs to write concise emails, specs and commit messages. You will even see improvement in more casual day to day interactions (via slack, SMS etc).&lt;/p&gt;
+&lt;p&gt;The Object constructor creates an object wrapper for the given value. If the value is &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;, it will create and return an empty object, otherwise, it will return an object of a Type that corresponds to the given value. If the value is an object already, it will return the value.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Reference: &lt;a href=&quot;https://news.ycombinator.com/item?id=16523006&quot;&gt;1&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;motohagiography&lt;/strong&gt; gave his 3 useful tips&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;“Start with why.” (I use 3 layers of why, some more, some fewer.)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;When called in a non-constructor context, &lt;code class=&quot;language-text&quot;&gt;Object&lt;/code&gt; behaves identically to &lt;code class=&quot;language-text&quot;&gt;new Object()&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Get it out, then go back and reverse the order of the sentences in each paragraph, so each one begins with the point you were getting to.&lt;/li&gt;
-&lt;li&gt;Kill your babies. Any turn of phrase you are working around to keep it in, or make it work is not as good as you think.&lt;/li&gt;
-&lt;li&gt;Read a lot of quality, edited writing. The Economist, Financial Times, Telegraph, and sometimes even the Guardian. Avoid cloying, sing-song, editorial prose that is full of jargon and cliches.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Reference: &lt;a href=&quot;https://news.ycombinator.com/item?id=16523545&quot;&gt;1&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Know your audience.&lt;/li&gt;
-&lt;li&gt;Use &lt;strong&gt;active voice&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Read good writing.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;I tried to use &lt;code class=&quot;language-text&quot;&gt;Object()&lt;/code&gt; with multiple types, all returned values were converted to &lt;code class=&quot;language-text&quot;&gt;Object&lt;/code&gt;. So my assumption of using this function is to make sure &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; is an object.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;        &lt;span class=&quot;token comment&quot;&gt;// {}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;undefined&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;token comment&quot;&gt;// {}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;            &lt;span class=&quot;token comment&quot;&gt;// {}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;token comment&quot;&gt;// [1, 2, 3]&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;      &lt;span class=&quot;token comment&quot;&gt;// {a: 1}&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;token comment&quot;&gt;// String {&quot;1&quot;} type &quot;object&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;           &lt;span class=&quot;token comment&quot;&gt;// Number {1} type &quot;object&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;       &lt;span class=&quot;token comment&quot;&gt;// Boolean {false} type &quot;object&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I never saw any usages of &lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt; in JavaScript before so I googled and learned that it is called &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3E%3E%3E_(Zero-fill_right_shift)&quot;&gt;&lt;strong&gt;Zero-fill right shift&lt;/strong&gt;&lt;/a&gt;. From the useful comment of the statement, reason for using &lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt; is to convert &lt;code class=&quot;language-text&quot;&gt;Number&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;UNSIGNED INT 32&lt;/code&gt; (This is a &lt;a href=&quot;https://stackoverflow.com/questions/22335853/hack-to-convert-javascript-number-to-uint32&quot;&gt;hack way&lt;/a&gt;. May be because JavaScript has no built-in function to do it). I still don’t know why &lt;code class=&quot;language-text&quot;&gt;len&lt;/code&gt; have to be &lt;code class=&quot;language-text&quot;&gt;Uint32&lt;/code&gt; though.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 2. Let lenValue be the result of calling the Get internal&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//    method of O with the argument &quot;length&quot;.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 3. Let len be ToUint32(lenValue).&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then check if &lt;code class=&quot;language-text&quot;&gt;callback&lt;/code&gt; is type &lt;code class=&quot;language-text&quot;&gt;function&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 4. If IsCallable(callback) is false, throw a TypeError exception.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// See: http://es5.github.com/#x9.11&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; callback &lt;span class=&quot;token operator&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;function&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;callback &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos; is not a function&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then assign &lt;code class=&quot;language-text&quot;&gt;T&lt;/code&gt; with second argument of &lt;code class=&quot;language-text&quot;&gt;map&lt;/code&gt; function (remember &lt;code class=&quot;language-text&quot;&gt;thisArg&lt;/code&gt;?) and will be used later in iteration of target array.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arguments&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; arguments&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// ii. Let mappedValue be the result of calling the Call internal&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//     method of callback with T as the this value and argument&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//     list containing kValue, k, and O.&lt;/span&gt;
+mappedValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; callback&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kValue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then assign &lt;code class=&quot;language-text&quot;&gt;A&lt;/code&gt; with an empty array of size determined by &lt;code class=&quot;language-text&quot;&gt;len&lt;/code&gt; (length of target array).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 6. Let A be a new array created as if by the expression new Array(len)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//    where Array is the standard built-in constructor with that name and&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//    len is the value of len.&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;len&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then we finally come to iteration which is pretty simple, each index of &lt;code class=&quot;language-text&quot;&gt;A&lt;/code&gt; will be assigned by the result from executions of &lt;code class=&quot;language-text&quot;&gt;callback&lt;/code&gt;. When iteration completed, return &lt;code class=&quot;language-text&quot;&gt;A&lt;/code&gt; as a final result.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;k &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; len&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; kValue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mappedValue&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;k &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    kValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    mappedValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; callback&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; kValue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;O&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;k&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; mappedValue&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  k&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To be honest, I never used &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;in&lt;/code&gt;&lt;/a&gt; operator before, I have seen usages of it but never tried in my code. In this case, &lt;code class=&quot;language-text&quot;&gt;if (k in O)&lt;/code&gt; will return false when &lt;code class=&quot;language-text&quot;&gt;k&lt;/code&gt; is not an index of &lt;code class=&quot;language-text&quot;&gt;O&lt;/code&gt;. (example below comes from &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in#Description&quot;&gt;here&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; trees &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;redwood&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;bay&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;cedar&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;oak&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;maple&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; trees        &lt;span class=&quot;token comment&quot;&gt;// returns true&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; trees        &lt;span class=&quot;token comment&quot;&gt;// returns true&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; trees        &lt;span class=&quot;token comment&quot;&gt;// returns false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And that’s it &lt;code class=&quot;language-text&quot;&gt;Array.prototype.map&lt;/code&gt; simple but yet I learned a lot even from very tiny source code.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;From &lt;a href=&quot;https://theirrelevantinvestor.com/2018/01/15/advice-for-aspiring-writers/&quot;&gt;Advice For Aspiring Writers&lt;/a&gt; by Michael Batnick&lt;/p&gt;
+&lt;h3&gt;Things I learned&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Read good writing.&lt;/li&gt;
-&lt;li&gt;Be concise.&lt;/li&gt;
+&lt;li&gt;All those number bullet-point comments come from &lt;a href=&quot;http://es5.github.io/#x15.4.4.19&quot;&gt;Annotated ECMAScript 5.1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Don’t waste reader’s time. (quote from a book named &lt;a href=&quot;https://www.audible.com/pd/Nobody-Wants-to-Read-Your-Sh-t-Audiobook/B07FXZ25CC?qid=1547713888&amp;#x26;sr=sr_1_1&amp;#x26;ref=a_search_c3_lProduct_1_1&amp;#x26;pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&amp;#x26;pf_rd_r=BCD4WR5T96G3BEWFTT8N&amp;#x26;&quot;&gt;Nobody Wants to Read Your Sh*t&lt;/a&gt;)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When you understand that nobody wants to read your shit, your mind becomes powerfully concentrated. You begin to understand that writing/reading is, above all, a transaction. The reader donates his time and attention, which are supremely valuable commodities. In return, you the writer must give him something worthy of his gift to you.  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;Have goal for writing.&lt;/li&gt;
+&lt;p&gt;From &lt;code class=&quot;language-text&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It called &lt;strong&gt;Zero-fill right shift&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Convert &lt;code class=&quot;language-text&quot;&gt;Number&lt;/code&gt; base 10 to binary using &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Number.toString(2)&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Some of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators&quot;&gt;bitwise operators&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;UNSIGNED INT&lt;/code&gt; has no negative value.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Best of 2018]]></title><description><![CDATA[List of good things I can think of for year 2018 in alphabetical order. Book ,  The Subtle Art of Not Giving a F*ck . It is a good start for…]]></description><link>warizz.io/best-of-2018/</link><guid isPermaLink="false">warizz.io/best-of-2018/</guid><pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;List of good things I can think of for year 2018 in alphabetical order.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Using &lt;code class=&quot;language-text&quot;&gt;in&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;Array&lt;/code&gt; and index number.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;English writing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://english.stackexchange.com/questions/103152/i-came-from-italy-or-i-come-from-italy&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;come from&lt;/code&gt; vs &lt;code class=&quot;language-text&quot;&gt;came from&lt;/code&gt;&lt;/a&gt;—use &lt;code class=&quot;language-text&quot;&gt;come&lt;/code&gt; &lt;em&gt;mostly&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dictionary.cambridge.org/grammar/british-grammar/if-or-whether&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt; vs &lt;code class=&quot;language-text&quot;&gt;whether&lt;/code&gt;&lt;/a&gt;—&lt;em&gt;almost&lt;/em&gt; the same meanings and usages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/11515594/when-should-i-use-unsigned-and-signed-int-in-mysql&quot;&gt;When should I use UNSIGNED and SIGNED INT in MySQL?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/22335853/hack-to-convert-javascript-number-to-uint32&quot;&gt;Hack to convert javascript number to UInt32&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[เขาสันหนอกวัว, กาญจนบุรี]]></title><description><![CDATA[See English version…]]></description><link>warizz.io/trip-2019-01-th/</link><guid isPermaLink="false">warizz.io/trip-2019-01-th/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/trip-2019-01-en&quot;&gt;See English version&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.36000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAYXJchP/xAAYEAADAQEAAAAAAAAAAAAAAAAAAQIDFP/aAAgBAQABBQJbaMW9yddn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BCf/EABcRAQADAAAAAAAAAAAAAAAAAAECEBH/2gAIAQIBAT8BZO1//8QAFxAAAwEAAAAAAAAAAAAAAAAAABAhEf/aAAgBAQAGPwKFxf/EABcQAAMBAAAAAAAAAAAAAAAAAAABEUH/2gAIAQEAAT8hzQirB2w//9oADAMBAAIAAwAAABD0H//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAgBAwEBPxDEYy//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EMhcv//EABsQAQACAgMAAAAAAAAAAAAAAAEAIRFxMYHh/9oACAEBAAE/EKyo6jwLYuZxwjXs/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;สันหนอกใหญ่ไปสันหนอกเล็ก&quot;
+        title=&quot;&quot;
+        src=&quot;/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg&quot;
+        srcset=&quot;/static/406983e254cb01645516819881c8ba73/e8976/2019010517094801.jpg 148w,
+/static/406983e254cb01645516819881c8ba73/63df2/2019010517094801.jpg 295w,
+/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg 590w,
+/static/406983e254cb01645516819881c8ba73/85e3d/2019010517094801.jpg 885w,
+/static/406983e254cb01645516819881c8ba73/d1924/2019010517094801.jpg 1180w,
+/static/406983e254cb01645516819881c8ba73/9452e/2019010517094801.jpg 1770w,
+/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;เขาสันหนอกวัวอยู่ในเขต&lt;a href=&quot;https://goo.gl/maps/xTzSjcVfULo&quot;&gt;อุทยานแห่งชาติเขาแหลม จังหวัดกาญจนบุรี&lt;/a&gt; ทริปนี้ค่อนข้างสั้น เพราะขึ้นไปนอนเพียงแค่คืนเดียวก็เพียงพอ และเดินไม่ยากมาก มีช่วงชันแบบเหนื่อยสุดๆ ประมาณเกือบถึงจุดตั้งแคมป์สัก 2 กิโลเมตร เดินขึ้นใช้เวลาประมาณ 3 ถึง 5 ชั่วโมง และเดินขึ้นยอด 2 ยอดเพื่อชมพระอาทิตย์ขึ้นและตกอีกไม่เกินครึ่งชั่วโมง บริเวณจุดตั้งแคมป์เป็นที่ราบริมผา มีต้นไม้ประปราย สามารถมองเป็นมุมกว้างเเห็น&lt;a href=&quot;https://goo.gl/maps/nuj4p3adCWG2&quot;&gt;เขื่อนวชิราลงกรณ์&lt;/a&gt;ที่อยู่ใกล้ๆและผืนป่าด้านล่างออกไปได้ไกลสุดสายตา&lt;/p&gt;
+&lt;p&gt;การจองนั้นไม่ยาก &lt;a href=&quot;https://www.facebook.com/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1-330864760360387/&quot;&gt;แต่มีรายละเอียดปลีกย่อยนิดหน่อย&lt;/a&gt; โดยรวมแล้วมีความเป็นระบบระเบียบดี วันที่ไปนั้น ค่ามัดจำ คนละ 100 บาท ค่าเข้าอุทยานอีกคนละไม่เกิน 100 บาท และค่าลูกหาบที่แบกได้ 30 กิโล คนละ 1,400 บาท น้ำหนักเกินกว่านั้นคิดกิโลละ 49 บาท&lt;/p&gt;
+&lt;p&gt;วันเดินทาง เริ่มต้นที่&lt;a href=&quot;https://goo.gl/maps/ikhTcSF4qnB2&quot;&gt;จุดชมวิวป้อมปี่&lt;/a&gt; ทางอุทยานจะเปิดให้ลงทะเบียนได้ตั้งแต่ 8 โมง ถึง 10 โมง ชั่งน้ำหนักสัมภาระ และให้ลูกหาบเอาไปเตรียมแบก เมื่อทุกอย่างพร้อม เจ้าหน้าที่จะขับรถกระบะพาเราไปจุดเริ่มเดิน ใช้เวลาประมาณ 10 นาที&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAc4uBwEf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECESEi/9oACAEBAAEFApbo7Je1U8E/On//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGH/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bp//EABkQAQACAwAAAAAAAAAAAAAAAAEAECEiMf/aAAgBAQAGPwLYmORaa//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExYf/aAAgBAQABPyHjiszTpFRav2V2GxkF9uN+7P/aAAwDAQACAAMAAAAQEz//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qhkf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBj/8QAGxABAQADAQEBAAAAAAAAAAAAAREAIUFRYZH/2gAIAQEAAT8QlgpCAQnz9wtyACOqjd4+KupBlGtGnzOkS+lfcSUCCV7n/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;บริเวณจุดลงทะเบียน&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg&quot;
+        srcset=&quot;/static/4234cb228f8699702dcf26db47859908/e8976/2019010509110301.jpg 148w,
+/static/4234cb228f8699702dcf26db47859908/63df2/2019010509110301.jpg 295w,
+/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg 590w,
+/static/4234cb228f8699702dcf26db47859908/85e3d/2019010509110301.jpg 885w,
+/static/4234cb228f8699702dcf26db47859908/d1924/2019010509110301.jpg 1180w,
+/static/4234cb228f8699702dcf26db47859908/9452e/2019010509110301.jpg 1770w,
+/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;การเดินขึ้นสักหนอกวัวจะแบ่งออกเป็น 7 จุด จุดแรกคือจุดเริ่มต้น (จะขอเรียกว่าจุดที่ 0) ที่เจ้าหน้าที่ขับรถพาเรามาส่ง จากนั้นจะแบ่งเป็น 5 จุดพัก และจุดสุดท้ายคือจุดตั้งแคมป์ จาก 0 ไป 4 นั้นเดินไม่ยากมาก ระดับความชันจะไม่เยอะ แต่จาก 4 ถึง จุดค้างแรมนั้น เหนื่อยพอสมควร มีบางจุดที่เจ้าหน้าที่ต้องผูกเชือกไว้ให้นักท่องเที่ยวช่วยพยุงเพราะทางชันและลื่น&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.84%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZzESD//xAAYEAEAAwEAAAAAAAAAAAAAAAACABETIf/aAAgBAQABBQIGwh3Of//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAEBAAY/AnpUf//EABgQAAMBAQAAAAAAAAAAAAAAAAABESFR/9oACAEBAAE/IVo0rhHQrqP/2gAMAwEAAgADAAAAEHAP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QJ//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxARf//EABkQAQEBAQEBAAAAAAAAAAAAAAERACEx0f/aAAgBAQABPxAjihA843PO77bc3+2//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;จุดเริ่มต้นทางเดินขึ้นเขา&quot;
+        title=&quot;&quot;
+        src=&quot;/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg&quot;
+        srcset=&quot;/static/549fdeb86303c9b177e33a8727d99962/e8976/2019010509570807.jpg 148w,
+/static/549fdeb86303c9b177e33a8727d99962/63df2/2019010509570807.jpg 295w,
+/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg 590w,
+/static/549fdeb86303c9b177e33a8727d99962/85e3d/2019010509570807.jpg 885w,
+/static/549fdeb86303c9b177e33a8727d99962/d1924/2019010509570807.jpg 1180w,
+/static/549fdeb86303c9b177e33a8727d99962/9452e/2019010509570807.jpg 1770w,
+/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 150.96618357487924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFLIK4iMQ02hdXJhP/EABwQAAIDAAMBAAAAAAAAAAAAAAACAQMREBITIv/aAAgBAQABBQJY0ts+PVoE3LM88FswezskMQNx/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEQETESIP/aAAgBAQAGPwI5Ni3tQh+f/8QAHBABAAMBAQADAAAAAAAAAAAAAQARIUExUaHx/9oACAEBAAE/IWNtsSh72OQoEJz1IcT9I2fPqZHLuURr4IRe9nsiqLs//9oADAMBAAIAAwAAABC44j//xAAWEQEBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQMBAT8QyI//xAAWEQEBAQAAAAAAAAAAAAAAAAARABD/2gAIAQIBAT8QZjP/xAAdEAEBAAMAAgMAAAAAAAAAAAABEQAhMVFhQXGB/9oACAEBAAE/EHRV3T4fP1g3hk5mvfjG5tAh33lG6AfVdYKBARemmIjSVNVN4zHgL8MsgS26hMibLXDNg8uAoXAruf/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;ทางเดิน&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg&quot;
+        srcset=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/e8976/2019010510080809.jpg 148w,
+/static/8a3b1b40e486be5039270a49d64b4e76/63df2/2019010510080809.jpg 295w,
+/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg 590w,
+/static/8a3b1b40e486be5039270a49d64b4e76/85e3d/2019010510080809.jpg 885w,
+/static/8a3b1b40e486be5039270a49d64b4e76/d1924/2019010510080809.jpg 1180w,
+/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg 1656w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.28%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAEDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHPJLWD/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECAxET/9oACAEBAAEFApyHVlVt/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAYEAEBAQEBAAAAAAAAAAAAAAABEQAxsf/aAAgBAQABPyFRWdNUmW3m/9oADAMBAAIAAwAAABD4L//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxACwv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABgQAQEBAQEAAAAAAAAAAAAAAAERIQBB/9oACAEBAAE/ELaKBk5x0wIYPYAEA8Hf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;จุดพัก 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg&quot;
+        srcset=&quot;/static/c5861837a10be248f376cc49437f69a6/e8976/2019010511371017.jpg 148w,
+/static/c5861837a10be248f376cc49437f69a6/63df2/2019010511371017.jpg 295w,
+/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg 590w,
+/static/c5861837a10be248f376cc49437f69a6/85e3d/2019010511371017.jpg 885w,
+/static/c5861837a10be248f376cc49437f69a6/d1924/2019010511371017.jpg 1180w,
+/static/c5861837a10be248f376cc49437f69a6/9452e/2019010511371017.jpg 1770w,
+/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;เราใช้เวลา 3 ชั่วโมงก็ถึงจุดตั้งแคมป์ รอลูกหาบด้วยการเดินเล่น ดูรอบๆและหาจุดกางเต็นท์ จากนั้น 10 - 20 นาที ลูกหาบก็ขึ้นมาถึงก็จัดแจงตั้งเตนท์, หาน้ำใส่แกลลอน และถามว่าจะให้ก่อกองไฟรึเปล่า&lt;/p&gt;
+&lt;p&gt;วันที่ไปเป็นช่วงเสาร์-อาทิตย์ คนก็เลยเยอะเป็นพิเศษ เจ้าหน้าที่บอกว่าวันนั้นมีนักท่องเที่ยวหลักร้อย บริเวณพักแรมและจุดยอดเขาจึงเต็มไปด้วยคน ถ้าใครอยากได้รูปถ่ายที่ไม่ติดคน อาจจะต้องคิดใหม่ ถ้าจะมาช่วงนี้&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAQ0WxGGrP//EABkQAQEAAwEAAAAAAAAAAAAAAAECAAMSEf/aAAgBAQABBQLv017GSlWcK5ltX//EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAEDAQE/AVf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIv/aAAgBAgEBPwFL/8QAHRAAAgAHAQAAAAAAAAAAAAAAAAECEBESISIxYf/aAAgBAQAGPwJK2o9TKhOHsv/EABsQAAMBAQADAAAAAAAAAAAAAAABESFBMVFx/9oACAEBAAE/IWrqi7ZRBYzNLGr4TPRPBtImnSy8H//aAAwDAQACAAMAAAAQiz//xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEx/9oACAEDAQE/ELMY/wD/xAAYEQACAwAAAAAAAAAAAAAAAAAAAREhgf/aAAgBAgEBPxCG7Rs//8QAGxABAAMAAwEAAAAAAAAAAAAAAQARITFBYVH/2gAIAQEAAT8QFyVvdjzvmWBIT1j6VrGuC2qRC1GyPmw/cl3NQeI9vron/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;จุดพักแรม 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg&quot;
+        srcset=&quot;/static/99211433d548d026cca8eefa2a347dac/e8976/2019010518181809.jpg 148w,
+/static/99211433d548d026cca8eefa2a347dac/63df2/2019010518181809.jpg 295w,
+/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg 590w,
+/static/99211433d548d026cca8eefa2a347dac/85e3d/2019010518181809.jpg 885w,
+/static/99211433d548d026cca8eefa2a347dac/d1924/2019010518181809.jpg 1180w,
+/static/99211433d548d026cca8eefa2a347dac/9452e/2019010518181809.jpg 1770w,
+/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;เรารอจนถึง 5 โมงเย็น แล้วจึงเดินขึ้นไปดูพระอาทิตย์ตกบนหนอกเล็กและหนอกใหญ่ การเดินขึ้นหนอกเล็ก หรือหนอกใหญ่นั้นค่อนข้างง่าย ชันแต่ระยะสั้น ขึ้นถึงยอดใช้เวลาไม่น่าเกินหนอกละ 15 ถึง 20 นาที แต่โชคร้าย วันที่ไปเมฆเยอะทั้งยามเย็นและรุ่งเช้า ทำไห้ไม่ได้เห็นพระอาทิตย์ขึ้นและตกเลย แต่ยังดีที่มีฟ้าระเบิดให้เห็นสวยงามทีเดียว&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 32.36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAGAIGP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAgEDERMU/9oACAEBAAEFAovfG9kOs//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAwEBPwFQf//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPwF0f//EABgQAQADAQAAAAAAAAAAAAAAAAABMkFR/9oACAEBAAY/AsdUh//EABkQAAIDAQAAAAAAAAAAAAAAAAABEVFxIf/aAAgBAQABPyF2HGIVbSHcv//aAAwDAQACAAMAAAAQ+D//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCCP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAU1v/EABoQAQEAAgMAAAAAAAAAAAAAAAERACExYaH/2gAIAQEAAT8QJKU1gC1Vbzz3Kuw9Of/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;สันหนอกเล็กไปสันหนอกใหญ่&quot;
+        title=&quot;&quot;
+        src=&quot;/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg&quot;
+        srcset=&quot;/static/079fd9bb10b34822e73397b811d078e4/e8976/2019010516533005.jpg 148w,
+/static/079fd9bb10b34822e73397b811d078e4/63df2/2019010516533005.jpg 295w,
+/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg 590w,
+/static/079fd9bb10b34822e73397b811d078e4/85e3d/2019010516533005.jpg 885w,
+/static/079fd9bb10b34822e73397b811d078e4/d1924/2019010516533005.jpg 1180w,
+/static/079fd9bb10b34822e73397b811d078e4/9452e/2019010516533005.jpg 1770w,
+/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGK48VAUT//xAAaEAACAgMAAAAAAAAAAAAAAAABAgAREiEy/9oACAEBAAEFAg4mVwvBydFmN//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAwEBPwHKP//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAgEBPwHSv//EABgQAAMBAQAAAAAAAAAAAAAAAAAQQREy/9oACAEBAAY/AqclWr//xAAbEAACAwADAAAAAAAAAAAAAAAAAREhMUFx4f/aAAgBAQABPyGLEN0P0lgsq4MjRjR//9oADAMBAAIAAwAAABB3H//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/ECH/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxBor//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExUUFhof/aAAgBAQABPxBUk9DGVFC6W8r4PV4wCoUCgS5YKh1b3ziVfnP/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;สักนหอกเล็กไปจุดพักแรม 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg&quot;
+        srcset=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/e8976/2019010517483402.jpg 148w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/63df2/2019010517483402.jpg 295w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg 590w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/85e3d/2019010517483402.jpg 885w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/d1924/2019010517483402.jpg 1180w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/9452e/2019010517483402.jpg 1770w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 51.12%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAVVxvyyLC//EABkQAAMAAwAAAAAAAAAAAAAAAAABEhATMf/aAAgBAQABBQLeymyxdx//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AbWn/8QAGRAAAQUAAAAAAAAAAAAAAAAAABESIDEy/9oACAEBAAY/AqFaYh//xAAZEAEBAAMBAAAAAAAAAAAAAAABABEhUUH/2gAIAQEAAT8hO5nYZk4xvqVybZXt/9oADAMBAAIAAwAAABBD7//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EAR//8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFHLV//EABwQAAICAgMAAAAAAAAAAAAAAAERACExUUGRof/aAAgBAQABPxBT3hwOeCXUaTjswIEQvcLCSBYceFsbn//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;สักนหอกเล็กไปจุดพักแรม 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg&quot;
+        srcset=&quot;/static/fe9888931936321122f01fd5f4fc910a/e8976/2019010517514503.jpg 148w,
+/static/fe9888931936321122f01fd5f4fc910a/63df2/2019010517514503.jpg 295w,
+/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg 590w,
+/static/fe9888931936321122f01fd5f4fc910a/85e3d/2019010517514503.jpg 885w,
+/static/fe9888931936321122f01fd5f4fc910a/d1924/2019010517514503.jpg 1180w,
+/static/fe9888931936321122f01fd5f4fc910a/9452e/2019010517514503.jpg 1770w,
+/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHnZeKigT//xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIDERMhQf/aAAgBAQABBQJVRyMthaXGj//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AYf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAIAQIBAT8B0r//xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECIDGR/9oACAEBAAY/AkODVeYf/8QAHBABAAIBBQAAAAAAAAAAAAAAAQARIVFhcYGR/9oACAEBAAE/IdBnaKtp2QIr2h01KHlAtxP/2gAMAwEAAgADAAAAEMAP/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EFZGf//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBZYv/EABsQAQADAQADAAAAAAAAAAAAAAEAESExQWGB/9oACAEBAAE/ECAAOMrcILnwgYvXm1jZJbuTohi32xNw7P/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;สักนหอกเล็กไปจุดพักแรม 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg&quot;
+        srcset=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/e8976/2019010517565307.jpg 148w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/63df2/2019010517565307.jpg 295w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg 590w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/85e3d/2019010517565307.jpg 885w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/d1924/2019010517565307.jpg 1180w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/9452e/2019010517565307.jpg 1770w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAASXCs0Ucn//EABoQAAICAwAAAAAAAAAAAAAAAAERAAIDIjH/2gAIAQEAAQUCwqaI2DpGTD3/xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8BDJ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAABBQEAAAAAAAAAAAAAAAAAARARISKR/9oACAEBAAY/AtQaVeFNbf/EABkQAAMBAQEAAAAAAAAAAAAAAAABESExcf/aAAgBAQABPyFr1A1eKYtCkM54M49HtanQ/9oADAMBAAIAAwAAABA/7//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCBj//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBdtb//xAAdEAEBAAEEAwAAAAAAAAAAAAABEQAhMUFRYXGR/9oACAEBAAE/EDOJEFrH1zkOoNmHzrlkIOSYZBCamRaoQobY/t1n/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;จุดพักแรม 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg&quot;
+        srcset=&quot;/static/4da522d48c3b76d5ded9bf772243de67/e8976/2019010518200211.jpg 148w,
+/static/4da522d48c3b76d5ded9bf772243de67/63df2/2019010518200211.jpg 295w,
+/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg 590w,
+/static/4da522d48c3b76d5ded9bf772243de67/85e3d/2019010518200211.jpg 885w,
+/static/4da522d48c3b76d5ded9bf772243de67/d1924/2019010518200211.jpg 1180w,
+/static/4da522d48c3b76d5ded9bf772243de67/9452e/2019010518200211.jpg 1770w,
+/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABw+SyXrJ4f//EABgQAAMBAQAAAAAAAAAAAAAAAAECEQAD/9oACAEBAAEFAkaaqWJ50Ni5l3//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwEn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQQDAAAAAAAAAAAAAAAAAAERICEycaH/2gAIAQEABj8Cti1VtGXIf//EABoQAQEAAwEBAAAAAAAAAAAAAAEAESFRYXH/2gAIAQEAAT8hBGQJUfRIBbVT72wYa7M//9oADAMBAAIAAwAAABATL//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxAGWF//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8QVbW//8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUXGB/9oACAEBAAE/EKVQ3SxVl6pOOpmBbYUz7c4cBfqXq1iO+4i6W++z/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;จุดพักแรม 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg&quot;
+        srcset=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/e8976/2019010518230714.jpg 148w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/63df2/2019010518230714.jpg 295w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg 590w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/85e3d/2019010518230714.jpg 885w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/d1924/2019010518230714.jpg 1180w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/9452e/2019010518230714.jpg 1770w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;แย่ที่สุดคือตอนกลางคืนเพราะลมแรงมาก ด้วยที่ตัวเตนท์ที่เอาไปก็ชำรุดอยู่ก่อนแล้ว เจอแรงลมขนาดนี้ก็เลยพัง หมุดหลุด เสาหลุด เจ้าหน้าที่ต้องเข้ามาช่วยซ่อมเตนท์ให้ (แต่สุดท้ายก็พังอยู่ดี) ถามเจ้าหน้าที่เช้าวันรุ่งขึ้นได้ความว่า ลมวันนี้แรงที่สุดเทียบกับวันก่อนๆหน้า(อาจเป็นผลกระทบจากหางปาบึก) หลังจากที่ซ่อมเตนท์นี้ ก็ต้องไปซ่อมให้นักเดินทางคนอื่นๆอีกจนถึงตี 2 ถ้าฝนตกลงมาด้วย ทุกอย่างคงเละเทะไปหมด&lt;/p&gt;
+&lt;p&gt;การเดินลงจากเขานั้นค่อนข้างสบาย จะไม่ขอพูดถึงรายละเอียดเพราะมันก็คือทางเดียวกับที่เราเดินขึ้นนั่นแหละ เมื่อลงไปถึงจุดเริ่มต้น จะมีเจ้าหน้าที่มารอรับเรากลับป้อมปี่ กระบะไหนครบก็ล้อหมุนก่อนได้เลย ไม่ต้องรอกลุ่มเดิมคันเดิมกับขามา&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGPM9EIFlf/xAAZEAEBAAMBAAAAAAAAAAAAAAABAgAQEiL/2gAIAQEAAQUCi+ZZV1T4z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAEQABFR/9oACAEBAAY/Aq2Fhf/EABsQAAICAwEAAAAAAAAAAAAAAAARATEhQVFh/9oACAEBAAE/IYZaKjMj9KOE1+hn/9oADAMBAAIAAwAAABDvD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB4QAQACAgEFAAAAAAAAAAAAAAEAESFBMVFxkaHB/9oACAEBAAE/EFXaSx11fmOClba4jmi+pvv+wCCFV1vMsrbP/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;ทางเดินกลับ 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg&quot;
+        srcset=&quot;/static/2b1234dde647f6d94d7f1309888627fc/e8976/2019010608470406.jpg 148w,
+/static/2b1234dde647f6d94d7f1309888627fc/63df2/2019010608470406.jpg 295w,
+/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg 590w,
+/static/2b1234dde647f6d94d7f1309888627fc/85e3d/2019010608470406.jpg 885w,
+/static/2b1234dde647f6d94d7f1309888627fc/d1924/2019010608470406.jpg 1180w,
+/static/2b1234dde647f6d94d7f1309888627fc/9452e/2019010608470406.jpg 1770w,
+/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;ถึงป้อมปี่ก็คืนเตนท์ ถ้าเอาขยะกลับลงมาแล้วนำไปชั่งได้หนักเกิน 1.5 กิโลกรัม จะได้เข็มกลัดเป็นรางวัล ห้องน้ำของทางอุทยานก็ทำไว้อย่างดี ถ่ายสะดวก อาบน้ำสบาย ธุระเสร็จครบก็เก็บของกลับ กทม. เป็นอันจบทริป&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hiking at Khao San Nok Wua, Kanjanaburi]]></title><description><![CDATA[อ่านภาษาไทย Khao San Nok Wua   (Khao=mountain, San=ridge, Nok=hump and Wua=Cow)  is located within the area of  Khao Lam national park . You…]]></description><link>warizz.io/trip-2019-01-en/</link><guid isPermaLink="false">warizz.io/trip-2019-01-en/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/trip-2019-01-th&quot;&gt;อ่านภาษาไทย&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.36000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAYXJchP/xAAYEAADAQEAAAAAAAAAAAAAAAAAAQIDFP/aAAgBAQABBQJbaMW9yddn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BCf/EABcRAQADAAAAAAAAAAAAAAAAAAECEBH/2gAIAQIBAT8BZO1//8QAFxAAAwEAAAAAAAAAAAAAAAAAABAhEf/aAAgBAQAGPwKFxf/EABcQAAMBAAAAAAAAAAAAAAAAAAABEUH/2gAIAQEAAT8hzQirB2w//9oADAMBAAIAAwAAABD0H//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAgBAwEBPxDEYy//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EMhcv//EABsQAQACAgMAAAAAAAAAAAAAAAEAIRFxMYHh/9oACAEBAAE/EKyo6jwLYuZxwjXs/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Yai to Nok Lek&quot;
+        title=&quot;&quot;
+        src=&quot;/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg&quot;
+        srcset=&quot;/static/406983e254cb01645516819881c8ba73/e8976/2019010517094801.jpg 148w,
+/static/406983e254cb01645516819881c8ba73/63df2/2019010517094801.jpg 295w,
+/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg 590w,
+/static/406983e254cb01645516819881c8ba73/85e3d/2019010517094801.jpg 885w,
+/static/406983e254cb01645516819881c8ba73/d1924/2019010517094801.jpg 1180w,
+/static/406983e254cb01645516819881c8ba73/9452e/2019010517094801.jpg 1770w,
+/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Khao San Nok Wua&lt;/strong&gt; &lt;em&gt;(Khao=mountain, San=ridge, Nok=hump and Wua=Cow)&lt;/em&gt; is located within the area of &lt;a href=&quot;https://goo.gl/maps/xTzSjcVfULo&quot;&gt;Khao Lam national park&lt;/a&gt;. You need only 1 and a half day and 1 night for the whole trip (excluded traveling from/to your place). Walking up is not difficult, there are only 2 kms before base camp that are very steep elevation, it took around 3 - 5 hours and not more than half an hour for each of both mountain tops. Camp area is settle around cliff which you can see panorama view of the national park and &lt;a href=&quot;https://goo.gl/maps/nuj4p3adCWG2&quot;&gt;Vajira-longkorn dam&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Booking is not easy if you are foreigners because you have to send some documents to officers and pay register fee beforehand, details are &lt;a href=&quot;https://www.facebook.com/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1-330864760360387/&quot;&gt;here but only in Thai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On the appointment date, at &lt;a href=&quot;https://goo.gl/maps/ikhTcSF4qnB2&quot;&gt;Pom Pee view point&lt;/a&gt;, registration open from 8 - 10am. Weigh your belongings if need porters. When everything is ready, officers will bring you to the starting point by truck which takes around 10 minutes.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAc4uBwEf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECESEi/9oACAEBAAEFApbo7Je1U8E/On//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGH/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bp//EABkQAQACAwAAAAAAAAAAAAAAAAEAECEiMf/aAAgBAQAGPwLYmORaa//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExYf/aAAgBAQABPyHjiszTpFRav2V2GxkF9uN+7P/aAAwDAQACAAMAAAAQEz//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qhkf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBj/8QAGxABAQADAQEBAAAAAAAAAAAAAREAIUFRYZH/2gAIAQEAAT8QlgpCAQnz9wtyACOqjd4+KupBlGtGnzOkS+lfcSUCCV7n/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;registration boot&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg&quot;
+        srcset=&quot;/static/4234cb228f8699702dcf26db47859908/e8976/2019010509110301.jpg 148w,
+/static/4234cb228f8699702dcf26db47859908/63df2/2019010509110301.jpg 295w,
+/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg 590w,
+/static/4234cb228f8699702dcf26db47859908/85e3d/2019010509110301.jpg 885w,
+/static/4234cb228f8699702dcf26db47859908/d1924/2019010509110301.jpg 1180w,
+/static/4234cb228f8699702dcf26db47859908/9452e/2019010509110301.jpg 1770w,
+/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Hiking up to base camp is split into 7 rest areas. First is starting point (I will call it No. 0) after that are rest area No. 1 - 5 the last one is camp area. Walking from No. 0 to No. 4 is not difficult but going from No. 4 to camp is quite tiresome because there are some range of the route that are very steep and slippery therefore national park officers has prepared rope to help you go up easier.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.84%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZzESD//xAAYEAEAAwEAAAAAAAAAAAAAAAACABETIf/aAAgBAQABBQIGwh3Of//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAEBAAY/AnpUf//EABgQAAMBAQAAAAAAAAAAAAAAAAABESFR/9oACAEBAAE/IVo0rhHQrqP/2gAMAwEAAgADAAAAEHAP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QJ//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxARf//EABkQAQEBAQEBAAAAAAAAAAAAAAERACEx0f/aAAgBAQABPxAjihA843PO77bc3+2//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;starting point&quot;
+        title=&quot;&quot;
+        src=&quot;/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg&quot;
+        srcset=&quot;/static/549fdeb86303c9b177e33a8727d99962/e8976/2019010509570807.jpg 148w,
+/static/549fdeb86303c9b177e33a8727d99962/63df2/2019010509570807.jpg 295w,
+/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg 590w,
+/static/549fdeb86303c9b177e33a8727d99962/85e3d/2019010509570807.jpg 885w,
+/static/549fdeb86303c9b177e33a8727d99962/d1924/2019010509570807.jpg 1180w,
+/static/549fdeb86303c9b177e33a8727d99962/9452e/2019010509570807.jpg 1770w,
+/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 150.96618357487924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFLIK4iMQ02hdXJhP/EABwQAAIDAAMBAAAAAAAAAAAAAAACAQMREBITIv/aAAgBAQABBQJY0ts+PVoE3LM88FswezskMQNx/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEQETESIP/aAAgBAQAGPwI5Ni3tQh+f/8QAHBABAAMBAQADAAAAAAAAAAAAAQARIUExUaHx/9oACAEBAAE/IWNtsSh72OQoEJz1IcT9I2fPqZHLuURr4IRe9nsiqLs//9oADAMBAAIAAwAAABC44j//xAAWEQEBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQMBAT8QyI//xAAWEQEBAQAAAAAAAAAAAAAAAAARABD/2gAIAQIBAT8QZjP/xAAdEAEBAAMAAgMAAAAAAAAAAAABEQAhMVFhQXGB/9oACAEBAAE/EHRV3T4fP1g3hk5mvfjG5tAh33lG6AfVdYKBARemmIjSVNVN4zHgL8MsgS26hMibLXDNg8uAoXAruf/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;path&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg&quot;
+        srcset=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/e8976/2019010510080809.jpg 148w,
+/static/8a3b1b40e486be5039270a49d64b4e76/63df2/2019010510080809.jpg 295w,
+/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg 590w,
+/static/8a3b1b40e486be5039270a49d64b4e76/85e3d/2019010510080809.jpg 885w,
+/static/8a3b1b40e486be5039270a49d64b4e76/d1924/2019010510080809.jpg 1180w,
+/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg 1656w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.28%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAEDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHPJLWD/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECAxET/9oACAEBAAEFApyHVlVt/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAYEAEBAQEBAAAAAAAAAAAAAAABEQAxsf/aAAgBAQABPyFRWdNUmW3m/9oADAMBAAIAAwAAABD4L//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxACwv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABgQAQEBAQEAAAAAAAAAAAAAAAERIQBB/9oACAEBAAE/ELaKBk5x0wIYPYAEA8Hf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;rest area No. 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg&quot;
+        srcset=&quot;/static/c5861837a10be248f376cc49437f69a6/e8976/2019010511371017.jpg 148w,
+/static/c5861837a10be248f376cc49437f69a6/63df2/2019010511371017.jpg 295w,
+/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg 590w,
+/static/c5861837a10be248f376cc49437f69a6/85e3d/2019010511371017.jpg 885w,
+/static/c5861837a10be248f376cc49437f69a6/d1924/2019010511371017.jpg 1180w,
+/static/c5861837a10be248f376cc49437f69a6/9452e/2019010511371017.jpg 1770w,
+/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Took me 3 hours to get to the camp area. We have had to wait for porters to come so we walked to take a look around and find spot for our tents. 10 - 20 minutes later, porters came and set up camp for us. They also brought us gallons of water and asked if we want to make a camp fire.&lt;/p&gt;
+&lt;p&gt;We went there on the weekend so the place were crowded. Officer that came with us said on that day there were tourists around hundred. So think carefully if you don’t want too many people as background in your photos.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAQ0WxGGrP//EABkQAQEAAwEAAAAAAAAAAAAAAAECAAMSEf/aAAgBAQABBQLv017GSlWcK5ltX//EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAEDAQE/AVf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIv/aAAgBAgEBPwFL/8QAHRAAAgAHAQAAAAAAAAAAAAAAAAECEBESISIxYf/aAAgBAQAGPwJK2o9TKhOHsv/EABsQAAMBAQADAAAAAAAAAAAAAAABESFBMVFx/9oACAEBAAE/IWrqi7ZRBYzNLGr4TPRPBtImnSy8H//aAAwDAQACAAMAAAAQiz//xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEx/9oACAEDAQE/ELMY/wD/xAAYEQACAwAAAAAAAAAAAAAAAAAAAREhgf/aAAgBAgEBPxCG7Rs//8QAGxABAAMAAwEAAAAAAAAAAAAAAQARITFBYVH/2gAIAQEAAT8QFyVvdjzvmWBIT1j6VrGuC2qRC1GyPmw/cl3NQeI9vron/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;camp 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg&quot;
+        srcset=&quot;/static/99211433d548d026cca8eefa2a347dac/e8976/2019010518181809.jpg 148w,
+/static/99211433d548d026cca8eefa2a347dac/63df2/2019010518181809.jpg 295w,
+/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg 590w,
+/static/99211433d548d026cca8eefa2a347dac/85e3d/2019010518181809.jpg 885w,
+/static/99211433d548d026cca8eefa2a347dac/d1924/2019010518181809.jpg 1180w,
+/static/99211433d548d026cca8eefa2a347dac/9452e/2019010518181809.jpg 1770w,
+/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We rested until 5pm and walked up to see sunset at &lt;strong&gt;Nok Lek&lt;/strong&gt; and &lt;strong&gt;Nok Yai&lt;/strong&gt; &lt;em&gt;(Lek=small and Yai=big)&lt;/em&gt;. Getting to both tops are pretty easy, they are a little bit steep but short. It probably not more than 15 - 20 minutes for each one. Unfortunately, that day is super cloudy and foggy so I couldn’t see both sunset and sunrise but at least I got some pictures of golden hour.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 32.36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAGAIGP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAgEDERMU/9oACAEBAAEFAovfG9kOs//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAwEBPwFQf//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPwF0f//EABgQAQADAQAAAAAAAAAAAAAAAAABMkFR/9oACAEBAAY/AsdUh//EABkQAAIDAQAAAAAAAAAAAAAAAAABEVFxIf/aAAgBAQABPyF2HGIVbSHcv//aAAwDAQACAAMAAAAQ+D//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCCP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAU1v/EABoQAQEAAgMAAAAAAAAAAAAAAAERACExYaH/2gAIAQEAAT8QJKU1gC1Vbzz3Kuw9Of/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Let to Nok Yai&quot;
+        title=&quot;&quot;
+        src=&quot;/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg&quot;
+        srcset=&quot;/static/079fd9bb10b34822e73397b811d078e4/e8976/2019010516533005.jpg 148w,
+/static/079fd9bb10b34822e73397b811d078e4/63df2/2019010516533005.jpg 295w,
+/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg 590w,
+/static/079fd9bb10b34822e73397b811d078e4/85e3d/2019010516533005.jpg 885w,
+/static/079fd9bb10b34822e73397b811d078e4/d1924/2019010516533005.jpg 1180w,
+/static/079fd9bb10b34822e73397b811d078e4/9452e/2019010516533005.jpg 1770w,
+/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGK48VAUT//xAAaEAACAgMAAAAAAAAAAAAAAAABAgAREiEy/9oACAEBAAEFAg4mVwvBydFmN//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAwEBPwHKP//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAgEBPwHSv//EABgQAAMBAQAAAAAAAAAAAAAAAAAQQREy/9oACAEBAAY/AqclWr//xAAbEAACAwADAAAAAAAAAAAAAAAAAREhMUFx4f/aAAgBAQABPyGLEN0P0lgsq4MjRjR//9oADAMBAAIAAwAAABB3H//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/ECH/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxBor//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExUUFhof/aAAgBAQABPxBUk9DGVFC6W8r4PV4wCoUCgS5YKh1b3ziVfnP/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Lek to camp 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg&quot;
+        srcset=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/e8976/2019010517483402.jpg 148w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/63df2/2019010517483402.jpg 295w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg 590w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/85e3d/2019010517483402.jpg 885w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/d1924/2019010517483402.jpg 1180w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/9452e/2019010517483402.jpg 1770w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 51.12%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAVVxvyyLC//EABkQAAMAAwAAAAAAAAAAAAAAAAABEhATMf/aAAgBAQABBQLeymyxdx//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AbWn/8QAGRAAAQUAAAAAAAAAAAAAAAAAABESIDEy/9oACAEBAAY/AqFaYh//xAAZEAEBAAMBAAAAAAAAAAAAAAABABEhUUH/2gAIAQEAAT8hO5nYZk4xvqVybZXt/9oADAMBAAIAAwAAABBD7//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EAR//8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFHLV//EABwQAAICAgMAAAAAAAAAAAAAAAERACExUUGRof/aAAgBAQABPxBT3hwOeCXUaTjswIEQvcLCSBYceFsbn//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Lek to camp 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg&quot;
+        srcset=&quot;/static/fe9888931936321122f01fd5f4fc910a/e8976/2019010517514503.jpg 148w,
+/static/fe9888931936321122f01fd5f4fc910a/63df2/2019010517514503.jpg 295w,
+/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg 590w,
+/static/fe9888931936321122f01fd5f4fc910a/85e3d/2019010517514503.jpg 885w,
+/static/fe9888931936321122f01fd5f4fc910a/d1924/2019010517514503.jpg 1180w,
+/static/fe9888931936321122f01fd5f4fc910a/9452e/2019010517514503.jpg 1770w,
+/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHnZeKigT//xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIDERMhQf/aAAgBAQABBQJVRyMthaXGj//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AYf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAIAQIBAT8B0r//xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECIDGR/9oACAEBAAY/AkODVeYf/8QAHBABAAIBBQAAAAAAAAAAAAAAAQARIVFhcYGR/9oACAEBAAE/IdBnaKtp2QIr2h01KHlAtxP/2gAMAwEAAgADAAAAEMAP/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EFZGf//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBZYv/EABsQAQADAQADAAAAAAAAAAAAAAEAESExQWGB/9oACAEBAAE/ECAAOMrcILnwgYvXm1jZJbuTohi32xNw7P/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Lek to camp 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg&quot;
+        srcset=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/e8976/2019010517565307.jpg 148w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/63df2/2019010517565307.jpg 295w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg 590w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/85e3d/2019010517565307.jpg 885w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/d1924/2019010517565307.jpg 1180w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/9452e/2019010517565307.jpg 1770w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAASXCs0Ucn//EABoQAAICAwAAAAAAAAAAAAAAAAERAAIDIjH/2gAIAQEAAQUCwqaI2DpGTD3/xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8BDJ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAABBQEAAAAAAAAAAAAAAAAAARARISKR/9oACAEBAAY/AtQaVeFNbf/EABkQAAMBAQEAAAAAAAAAAAAAAAABESExcf/aAAgBAQABPyFr1A1eKYtCkM54M49HtanQ/9oADAMBAAIAAwAAABA/7//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCBj//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBdtb//xAAdEAEBAAEEAwAAAAAAAAAAAAABEQAhMUFRYXGR/9oACAEBAAE/EDOJEFrH1zkOoNmHzrlkIOSYZBCamRaoQobY/t1n/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;camp 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg&quot;
+        srcset=&quot;/static/4da522d48c3b76d5ded9bf772243de67/e8976/2019010518200211.jpg 148w,
+/static/4da522d48c3b76d5ded9bf772243de67/63df2/2019010518200211.jpg 295w,
+/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg 590w,
+/static/4da522d48c3b76d5ded9bf772243de67/85e3d/2019010518200211.jpg 885w,
+/static/4da522d48c3b76d5ded9bf772243de67/d1924/2019010518200211.jpg 1180w,
+/static/4da522d48c3b76d5ded9bf772243de67/9452e/2019010518200211.jpg 1770w,
+/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABw+SyXrJ4f//EABgQAAMBAQAAAAAAAAAAAAAAAAECEQAD/9oACAEBAAEFAkaaqWJ50Ni5l3//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwEn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQQDAAAAAAAAAAAAAAAAAAERICEycaH/2gAIAQEABj8Cti1VtGXIf//EABoQAQEAAwEBAAAAAAAAAAAAAAEAESFRYXH/2gAIAQEAAT8hBGQJUfRIBbVT72wYa7M//9oADAMBAAIAAwAAABATL//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxAGWF//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8QVbW//8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUXGB/9oACAEBAAE/EKVQ3SxVl6pOOpmBbYUz7c4cBfqXq1iO+4i6W++z/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;camp 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg&quot;
+        srcset=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/e8976/2019010518230714.jpg 148w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/63df2/2019010518230714.jpg 295w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg 590w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/85e3d/2019010518230714.jpg 885w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/d1924/2019010518230714.jpg 1180w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/9452e/2019010518230714.jpg 1770w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The worst part of this trip was in the night. Our tent was in pretty bad condition and when it got the impact of very strong wind it collapsed, poles were pulled out of the ground. Thanks to officers for helping us fixed the tent. One of them said to me in the next morning that the wind was strongest compare to the days before (may be because of the big storm named Pa-Buk around the southern of Thailand that time) and after they fixed our tent, they went around and fixed other people’s until 2am. I couldn’t imagine how mess it going to be if there was raining that night.&lt;/p&gt;
+&lt;p&gt;Walking down from the camp is not as hard as walking up. There will be officers and trucks waiting for bringing to back to Pom Pee view point.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGPM9EIFlf/xAAZEAEBAAMBAAAAAAAAAAAAAAABAgAQEiL/2gAIAQEAAQUCi+ZZV1T4z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAEQABFR/9oACAEBAAY/Aq2Fhf/EABsQAAICAwEAAAAAAAAAAAAAAAARATEhQVFh/9oACAEBAAE/IYZaKjMj9KOE1+hn/9oADAMBAAIAAwAAABDvD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB4QAQACAgEFAAAAAAAAAAAAAAEAESFBMVFxkaHB/9oACAEBAAE/EFXaSx11fmOClba4jmi+pvv+wCCFV1vMsrbP/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;walking back 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg&quot;
+        srcset=&quot;/static/2b1234dde647f6d94d7f1309888627fc/e8976/2019010608470406.jpg 148w,
+/static/2b1234dde647f6d94d7f1309888627fc/63df2/2019010608470406.jpg 295w,
+/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg 590w,
+/static/2b1234dde647f6d94d7f1309888627fc/85e3d/2019010608470406.jpg 885w,
+/static/2b1234dde647f6d94d7f1309888627fc/d1924/2019010608470406.jpg 1180w,
+/static/2b1234dde647f6d94d7f1309888627fc/9452e/2019010608470406.jpg 1770w,
+/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Back at Pom Pee, we returned a rental tent and got a pin with the national park logo because we brought a trash bag weight more 1.5 kms back. Toilets and bath rooms are pretty neat and clean so we took a shower that we didn’t last night. We headed back to Bangkok around 1pm and that’s the end of the adventure.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reading other people's code episode 1: _.get]]></title><description><![CDATA[I will begin this series with   which I used most often compare to all Lodash’s functions. This is entire code of the function. It begins…]]></description><link>warizz.io/reading-other-people-code-ep-1/</link><guid isPermaLink="false">warizz.io/reading-other-people-code-ep-1/</guid><pubDate>Wed, 09 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I will begin this series with &lt;a href=&quot;https://lodash.com/docs/4.17.11#get&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;_.get&lt;/code&gt;&lt;/a&gt; which I used most often compare to all Lodash’s functions.&lt;/p&gt;
+&lt;p&gt;This is entire code of the function.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+    * Gets the value at `path` of `object`. If the resolved value is
+    * `undefined`, the `defaultValue` is returned in its place.
+    *
+    * @static
+    * @memberOf _
+    * @since 3.7.0
+    * @category Object
+    * @param {Object} object The object to query.
+    * @param {Array|string} path The path of the property to get.
+    * @param {*} [defaultValue] The value returned for `undefined` resolved values.
+    * @returns {*} Returns the resolved value.
+    * @example
+    *
+    * var object = { &apos;a&apos;: [{ &apos;b&apos;: { &apos;c&apos;: 3 } }] };
+    *
+    * _.get(object, &apos;a[0].b.c&apos;);
+    * // =&gt; 3
+    *
+    * _.get(object, [&apos;a&apos;, &apos;0&apos;, &apos;b&apos;, &apos;c&apos;]);
+    * // =&gt; 3
+    *
+    * _.get(object, &apos;a.b.c&apos;, &apos;default&apos;);
+    * // =&gt; &apos;default&apos;
+    */&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; defaultValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; object &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; undefined &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;baseGet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; undefined &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; defaultValue &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It begins with &lt;a href=&quot;http://usejsdoc.org&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;JSDoc&lt;/code&gt;&lt;/a&gt;, first 3 lines are description which is simple and clear. &lt;code class=&quot;language-text&quot;&gt;@static&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;@memberOf&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;@since&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;@category&lt;/code&gt; are new to me because I rarely write JSDoc.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Words prefix with &lt;code class=&quot;language-text&quot;&gt;@&lt;/code&gt; symbol are called &lt;a href=&quot;http://usejsdoc.org/about-block-inline-tags.html&quot;&gt;“tag”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://usejsdoc.org/tags-static.html&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@static&lt;/code&gt;&lt;/a&gt; means the function is static.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://usejsdoc.org/tags-memberof.html&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@memberOf _&lt;/code&gt;&lt;/a&gt; means the function is member of &lt;code class=&quot;language-text&quot;&gt;_&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://usejsdoc.org/tags-since.html&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@since 3.7.0&lt;/code&gt;&lt;/a&gt; means the function is in this repo since version 3.7.0&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ErnstHaagsman/jsdoc-plugins/blob/master/categories.md&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@category Object&lt;/code&gt;&lt;/a&gt; means the function is in &lt;code class=&quot;language-text&quot;&gt;Object&lt;/code&gt; category&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First statement of the function is validating &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; object &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; undefined &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;baseGet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Interesting that it use &lt;code class=&quot;language-text&quot;&gt;==&lt;/code&gt; (eqeq) instead of &lt;code class=&quot;language-text&quot;&gt;===&lt;/code&gt; (eqeqeq) why? in &lt;a href=&quot;https://eslint.org/docs/rules/no-eq-null&quot;&gt;eslint &lt;code class=&quot;language-text&quot;&gt;no-eq-null&lt;/code&gt; rule&lt;/a&gt; the value can be both &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;. This is convenient way for checking only &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt; but not include &lt;code class=&quot;language-text&quot;&gt;&amp;#39;&amp;#39;&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; test1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; test2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; undefined&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+test1 &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true&lt;/span&gt;
+test2 &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt; is not &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt; the function call &lt;code class=&quot;language-text&quot;&gt;baseGet&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+* The base implementation of `_.get` without support for default values.
+*
+* @private
+* @param {Object} object The object to query.
+* @param {Array|string} path The path of the property to get.
+* @returns {*} Returns the resolved value.
+*/&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;baseGet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+ path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;castPath&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+     length &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   object &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;index &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; object &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; undefined&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In &lt;code class=&quot;language-text&quot;&gt;JSDoc&lt;/code&gt; there is 1 new tag &lt;a href=&quot;http://usejsdoc.org/tags-private.html&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@private&lt;/code&gt;&lt;/a&gt; means that we can not use this function.&lt;/p&gt;
+&lt;p&gt;The first line it call &lt;code class=&quot;language-text&quot;&gt;castPath&lt;/code&gt; another private method to convert &lt;code class=&quot;language-text&quot;&gt;path&lt;/code&gt; to an array&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;castPath&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Casts `value` to a path array if it&apos;s not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {Array} Returns the cast property path array.
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;castPath&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isArray&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;stringToPath&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What is &lt;code class=&quot;language-text&quot;&gt;isKey()&lt;/code&gt; do? The description is pretty clear. Inside it has some checks that I’m not gonna dive any further.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isArray&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; type &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;type &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;number&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; type &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;symbol&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; type &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;boolean&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+      value &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isSymbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; reIsPlainProp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;reIsDeepProp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; value &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If the &lt;code class=&quot;language-text&quot;&gt;value&lt;/code&gt; is a key of &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt;, it will be returned as an array but if not, it will be converted to string and passed into &lt;code class=&quot;language-text&quot;&gt;stringToPath()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;stringToPath&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; stringToPath &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoizeCapped&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;string&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charCodeAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;46&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* . */&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  string&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;rePropName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;match&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; number&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; quote&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; subString&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;quote &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; subString&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reEscapeChar&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;$1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;number &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; match&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After a little exploration of &lt;code class=&quot;language-text&quot;&gt;memoizeCapped&lt;/code&gt; I decided to not go deeper into it but just to note that it use for caching a function.&lt;/p&gt;
+&lt;p&gt;First &lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt; statement is checking whether first character is &lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt; or not. I do not need to find that what &lt;code class=&quot;language-text&quot;&gt;charCode&lt;/code&gt; number 46 is because it was put as a comment behind the statement. Awesome!&lt;/p&gt;
+&lt;p&gt;Then there is &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;string.replace()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What is &lt;code class=&quot;language-text&quot;&gt;rePropName&lt;/code&gt;? The description is clear enough. Notice that they prefix any regex variables with &lt;code class=&quot;language-text&quot;&gt;re&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/** Used to match property names within property paths. */&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+rePropName &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|([&quot;&apos;])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I never use it with a callback function let’s see what is it for.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;function&lt;/code&gt; (replacement)
+A function to be invoked to create the new substring to be used to replace the matches to the given regexp or substr.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Not quite fully understand but they have more explanation &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_function_as_a_parameter&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;quote&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;subString&lt;/code&gt; are result from each capture groups. What are they capture? I used &lt;a href=&quot;https://regexper.com/&quot;&gt;Regexper&lt;/a&gt; to visualized it. &lt;a href=&quot;https://regexper.com/#%2F%5B%5E.%5B%5C%5D%5D%2B%7C%5C%5B%28%3F%3A%28-%3F%5Cd%2B%28%3F%3A%5C.%5Cd%2B%29%3F%29%7C%28%5B%22&amp;#x27;%5D%29%28%28%3F%3A%28%3F!%5C2%29%5B%5E%5C%5C%5D%7C%5C%5C.%29*%3F%29%5C2%29%5C%5D%7C%28%3F%3D%28%3F%3A%5C.%7C%5C%5B%5C%5D%29%28%3F%3A%5C.%7C%5C%5B%5C%5D%7C%24%29%29%2Fg&quot;&gt;Link to full picture&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e389d7832647c29d270a3df9dd26fc94/82ab5/rePropName.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 65.5126498002663%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACAklEQVQ4y4VT22rbQBDV/0Mf+9LXQlsKhb7WMYESapwm0NaO09i6WDfHWl0tS6u7fLqzJg5JHHdhtLeZs3PmjJS6rpGmKaqqwmuDfNq2wf/GbreD8rBomkYGPreu7WCvTKw8G33Xv7h/iGvbVoIqXdchSRJkWfbE8jzfm1jP5hPc3E0kkzzPjvpuNhsJrtCHDl/hICfTtGA5xkm6RVGgLMtHwL7vD4dEgTEP+tKCF2pg8S2Yl0CzfmGxHCOOEpRVKX0phlhyzveArdjQ4kAx5/KBNE2QpBlU8ycm8wGiiEO1r/Dn7xmiMEbOs73lW2y3WykqJaLEUSSK7sIPAtCaC1Df9+GtA3j3PuIgQxJyBIGPMIjF/ctuSJIUrncvWSmUTRCGYD7D3LiDZZmwbA0T8wOutXeYrd5j4X+Cu1ahmxocx4ITjqB7AxhsiGUwBAttxPFGiquQ3FSHuq6g2ypc14FhaLDXU9zoI3z5+hYfP7/BQp3BcV0J6MYjGP43AXYmbIC6TVFXDSqB8UTlnRCmEsWOwkjQT0XwGtPfU8ymt1gJMM9bi9pujqrMC/6oMvUQqUxqUcZkXdfKghcVKcmRUq+Jh7eiFxvx1zRtfTCKpaQkIG1IpedGDowx6KIEjuPg8mqMy+sxLNOUd8diKCHlVLNSK2Q8l/OPi3NcfB/KLjg1/gESjt+7SBrfVAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;rePropName&quot;
+        title=&quot;rePropName visualized&quot;
+        src=&quot;/static/e389d7832647c29d270a3df9dd26fc94/fb8a0/rePropName.png&quot;
+        srcset=&quot;/static/e389d7832647c29d270a3df9dd26fc94/1a291/rePropName.png 148w,
+/static/e389d7832647c29d270a3df9dd26fc94/2bc4a/rePropName.png 295w,
+/static/e389d7832647c29d270a3df9dd26fc94/fb8a0/rePropName.png 590w,
+/static/e389d7832647c29d270a3df9dd26fc94/82ab5/rePropName.png 751w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;From the picture above, the regex is not capture anything that’s not start and end with &lt;code class=&quot;language-text&quot;&gt;[]&lt;/code&gt; and must be any character inside. Then it will be separated into 3 groups 1) is number that will goes into &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt; variable 2) If first character start with &lt;code class=&quot;language-text&quot;&gt;&amp;quot;&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;&amp;#39;&lt;/code&gt; will goes into &lt;code class=&quot;language-text&quot;&gt;quote&lt;/code&gt; variable 3) Is any thing after 2). (Oh my goodness, I just realized that &lt;a href=&quot;https://regexper.com/&quot;&gt;Regexper&lt;/a&gt; is so useful)&lt;/p&gt;
+&lt;p&gt;So in replacer function, if &lt;code class=&quot;language-text&quot;&gt;quote&lt;/code&gt; has no value it will be returned as &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;match&lt;/code&gt; but if it has, &lt;code class=&quot;language-text&quot;&gt;subString&lt;/code&gt; will be replace by using regex &lt;code class=&quot;language-text&quot;&gt;reEscapeChar&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;quote &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; subString&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;reEscapeChar&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;$1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;number &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; match&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/** Used to match backslashes in property paths. */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; reEscapeChar &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;/\\(\\)?/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The statement &lt;code class=&quot;language-text&quot;&gt;subString.replace(reEscapeChar, &amp;#39;$1&amp;#39;)&lt;/code&gt; is removing &lt;code class=&quot;language-text&quot;&gt;\&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;subString&lt;/code&gt;. Then it return the &lt;code class=&quot;language-text&quot;&gt;result&lt;/code&gt; value that will always be an array.&lt;/p&gt;
+&lt;p&gt;Now to back to &lt;code class=&quot;language-text&quot;&gt;baseGet()&lt;/code&gt;. Statement &lt;code class=&quot;language-text&quot;&gt;path = castPath(path, object);&lt;/code&gt; is to convert input &lt;code class=&quot;language-text&quot;&gt;path&lt;/code&gt; to an &lt;code class=&quot;language-text&quot;&gt;Array&amp;lt;string&amp;gt;&lt;/code&gt;. Next statement is &lt;code class=&quot;language-text&quot;&gt;while&lt;/code&gt; loop to get value of &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;path&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// baseGet&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    length &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;object &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  object &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; object&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inside &lt;code class=&quot;language-text&quot;&gt;toKey()&lt;/code&gt;, the return statement is interesting.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * Converts `value` to a string key if it&apos;s not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;toKey&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; value &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;string&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isSymbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INFINITY&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;-0&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Turn value to string using &lt;code class=&quot;language-text&quot;&gt;+ &amp;#39;&amp;#39;&lt;/code&gt; but if value is &lt;code class=&quot;language-text&quot;&gt;-0&lt;/code&gt; then &lt;code class=&quot;language-text&quot;&gt;-0 + &amp;#39;&amp;#39;&lt;/code&gt; will be &lt;code class=&quot;language-text&quot;&gt;&amp;#39;0&amp;#39;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Check if &lt;code class=&quot;language-text&quot;&gt;result&lt;/code&gt; is &lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt; (number or string) and check if value is &lt;code class=&quot;language-text&quot;&gt;-0&lt;/code&gt; or not.&lt;/li&gt;
+&lt;li&gt;If yes, return &lt;code class=&quot;language-text&quot;&gt;-0&lt;/code&gt;. I couldn’t figure out why it has to check the value because &lt;code class=&quot;language-text&quot;&gt;object[0] === object[-0]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Declaration of INFINITY&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;INFINITY&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// return of `toKey`&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;result &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;0&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INFINITY&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;-0&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For example, if we give &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;path&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; object &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    b&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      c&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;This is it&apos;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;a&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;c&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;1st iteration, value of &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt; will be &lt;code class=&quot;language-text&quot;&gt;{b:{c:{&amp;#39;This is it&amp;#39;}}}&lt;/code&gt;.
+2nd will be &lt;code class=&quot;language-text&quot;&gt;{c:{&amp;#39;This is it&amp;#39;}}&lt;/code&gt;.
+And the last one will be &lt;code class=&quot;language-text&quot;&gt;&amp;#39;This is it&amp;#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In the &lt;code class=&quot;language-text&quot;&gt;return&lt;/code&gt; of &lt;code class=&quot;language-text&quot;&gt;baseGet()&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;index &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; object &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; undefined&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;(index &amp;amp;&amp;amp; index == length)&lt;/code&gt; is checking if the iteration is valid. If yes, it return &lt;code class=&quot;language-text&quot;&gt;object&lt;/code&gt; otherwise return &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now get back to &lt;code class=&quot;language-text&quot;&gt;get()&lt;/code&gt; (finally!). The last statement is pretty straightforward.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; undefined &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; defaultValue &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div style=&quot;margin:1em 0;width:100%;font-size:24px;font-weight:bold;text-align:center&quot;&gt;...&lt;/div&gt;
+&lt;p&gt;Things I learned from reading &lt;code class=&quot;language-text&quot;&gt;_.get&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Usages of &lt;a href=&quot;http://usejsdoc.org/&quot;&gt;JSDoc&lt;/a&gt;, which is very useful for readers of a function if you write them well.&lt;/li&gt;
+&lt;li&gt;Using &lt;code class=&quot;language-text&quot;&gt;== null&lt;/code&gt; to check &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Simple but helpful comment in &lt;code class=&quot;language-text&quot;&gt;if (string.charCodeAt(0) === 46 /* . */) {&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Usages of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;string.replace&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using replacer function.&lt;/li&gt;
+&lt;li&gt;Using &lt;code class=&quot;language-text&quot;&gt;$1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Usefulness of &lt;a href=&quot;https://regexper.com/&quot;&gt;Regexper&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-0 + &amp;#39;&amp;#39; === &amp;#39;0&amp;#39;&lt;/code&gt;. &lt;a href=&quot;https://jsfiddle.net/Warizz/1p62jLkm/14/&quot;&gt;demo&lt;/a&gt; &lt;script async src=&quot;//jsfiddle.net/Warizz/1p62jLkm/8/embed/js,result/dark/&quot;&gt;&lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;0 === -0&lt;/code&gt;(in JS). &lt;a href=&quot;https://jsfiddle.net/Warizz/t9cw0x6L/5/&quot;&gt;demo&lt;/a&gt;, &lt;a href=&quot;https://stackoverflow.com/questions/7223359/are-0-and-0-the-same&quot;&gt;Are +0 and -0 the same?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Cleaner way to compose components]]></title><description><![CDATA[I often found components were exported like this which look very confusing. My colleague made something like this which is a lot better than…]]></description><link>warizz.io/react-cleaner-way-to-compose-components/</link><guid isPermaLink="false">warizz.io/react-cleaner-way-to-compose-components/</guid><pubDate>Thu, 03 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I often found components were exported like this which look very confusing.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;graphql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;withRouter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;common&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Component&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;My colleague made something like this which is a lot better than above.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; HOCs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;graphql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  withRouter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;common&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ComponentWithHoc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; HOCs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; MainComponent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;From the idea, I made a function for reusable purpose.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;compose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;baseComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; baseComponent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Usage&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;compose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  BaseComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// base&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;graphql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 3rd&lt;/span&gt;
+  withRouter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 2nd&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;common&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1st&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This approach looks cleaner but a little bit weird because of the flow of composing that start from the first argument then goes to last then the one before last and so on.&lt;/p&gt;
+&lt;p&gt;One day while surfing the interweb, I stumbled upon a topic and found out that we can use Array’s &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;reduceRight&lt;/code&gt;&lt;/a&gt; function (I didn’t even know it exists!) to make the flow more natural.&lt;/p&gt;
+&lt;p&gt;So the final result would be.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;compose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reduceRight&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;acc&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;acc&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Usage&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;compose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;graphql&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 3rd&lt;/span&gt;
+  withRouter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 2nd&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;translate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;common&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1st&lt;/span&gt;
+  BaseComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// base&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Best of 2018]]></title><description><![CDATA[List of good things I can think of for year 2018 in alphabetical order. Book ,  The Subtle Art of Not Giving a F*ck . It is a good start for…]]></description><link>warizz.io/best-of-2018/</link><guid isPermaLink="false">warizz.io/best-of-2018/</guid><pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;List of good things I can think of for year 2018 in alphabetical order.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Book&lt;/strong&gt;, &lt;a href=&quot;https://www.audible.com/pd/The-Subtle-Art-of-Not-Giving-a-F-ck-Audiobook/B01I28NFEE&quot;&gt;The Subtle Art of Not Giving a F*ck&lt;/a&gt;. It is a good start for a &lt;strong&gt;focused&lt;/strong&gt; life.&lt;/p&gt;
@@ -63,12 +1487,11 @@ He also gave an super interesting opinion&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Trip&lt;/strong&gt;, &lt;a href=&quot;https://photos.app.goo.gl/eQ8t8eVvBQPoZc2n8&quot;&gt;ABC trekking (Nepal)&lt;/a&gt;. 2nd time to Nepal (my first was EBC trekking). This time was better because I went there with my girl and it was super fun. I don’t want to travel without her anymore.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Word&lt;/strong&gt;, Focus. Simple but difficult to execute because we have so many distractions these days. I use this word to remind myself that don’t give a shit about things that don’t matter, set &lt;a href=&quot;https://warizz.github.io/goals-2019/&quot;&gt;goals&lt;/a&gt;, prioritize and one step at a time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Word&lt;/strong&gt;, Focus. Simple but difficult to execute because we have so many distractions these days. I use this word to remind myself that don’t give a shit about things that don’t matter, set &lt;a href=&quot;/goals-2019&quot;&gt;goals&lt;/a&gt;, prioritize and one step at a time.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Mistakes in 2019]]></title><description><![CDATA[Mistake : I couldn’t find any car wash shops open on 1st of January. Why : I was procrastinated and did it on the last new year’s holiday…]]></description><link>warizz.io/mistakes-2019/</link><guid isPermaLink="false">warizz.io/mistakes-2019/</guid><pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Mistake&lt;/strong&gt;: I couldn’t find any car wash shops open on 1st of January.&lt;br&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Mistakes (2019)]]></title><description><![CDATA[Mistake : I couldn’t find any car wash shops open on 1st of January. Why : I was procrastinated and did it on the last new year’s holiday…]]></description><link>warizz.io/mistakes-2019/</link><guid isPermaLink="false">warizz.io/mistakes-2019/</guid><pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Mistake&lt;/strong&gt;: I couldn’t find any car wash shops open on 1st of January.&lt;br&gt;
 &lt;strong&gt;Why&lt;/strong&gt;: I was procrastinated and did it on the last new year’s holiday. It is also because of I did not plan it well enough.&lt;br&gt;
-&lt;strong&gt;How to prevent it&lt;/strong&gt;: Do not procrastinate &lt;em&gt;or&lt;/em&gt; plan better.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Objective, Subjective and Intersubjective]]></title><description><![CDATA[tl;dr. Objective is a fact, Subjective is an opinion and Intersubjective is an opinion that more than one person are agree upon. While…]]></description><link>warizz.io/objective-subjective-intersubjective/</link><guid isPermaLink="false">warizz.io/objective-subjective-intersubjective/</guid><pubDate>Tue, 25 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;tl;dr. Objective is a fact, Subjective is an opinion and Intersubjective is an opinion that more than one person are agree upon.&lt;/p&gt;
-&lt;p&gt;While listening to &lt;a href=&quot;https://www.audible.com/pd/Sapiens-Audiobook/B0741G911Q&quot;&gt;Sapiens : a brief history of humankind&lt;/a&gt;; There is no justice in history, I heard of the word “Intersubjective” which is new to me. So I do some research.&lt;/p&gt;
+&lt;strong&gt;How to prevent it&lt;/strong&gt;: Do not procrastinate &lt;em&gt;or&lt;/em&gt; plan better.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Objective, Subjective and Intersubjective]]></title><description><![CDATA[While listening to  Sapiens : a brief history of humankind ; There is no justice in history, I heard of the word “Intersubjective” which is…]]></description><link>warizz.io/objective-subjective-intersubjective/</link><guid isPermaLink="false">warizz.io/objective-subjective-intersubjective/</guid><pubDate>Tue, 25 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;While listening to &lt;a href=&quot;https://www.audible.com/pd/Sapiens-Audiobook/B0741G911Q&quot;&gt;Sapiens : a brief history of humankind&lt;/a&gt;; There is no justice in history, I heard of the word “Intersubjective” which is new to me. So I do some research.&lt;/p&gt;
 &lt;p&gt;We may have to know another 2 words prior to understand ‘intersubjective’, they are ‘objective’ and ‘subjective’. These 3 words mostly use for categorize data that we received.&lt;/p&gt;
 &lt;p&gt;If the data is objective, it means that it is fact and not involve any bias from speaker for example, “headphone is on the desk” or “current temperature is 25 degree” but if we said that “25 degree is hot” this is subjective because other people in the room may not feel the same as you.&lt;/p&gt;
 &lt;p&gt;If the data is subjective, it means that it based on opinion of the speaker for example when someone told you that chicken rice from a shop is very good but when you tried it not good because taste is subjective. Even the same person eat the same menu on difference time the taste can be difference. How fun is the movie or how good is the song are also subjective.&lt;/p&gt;
@@ -119,13 +1542,13 @@ He also gave an super interesting opinion&lt;/p&gt;
 &lt;p&gt;๑๕ ปีนี้มันนานมากนะ เป็นระยะเวลาที่ถ้าเราเริ่มต้นเรียนรู้อะไรสักอย่าง แล้วทำมันไปเรื่อยๆ ตลอด อย่างสม่ำเสมอ เราสามารถกลายเป็นผู้เชี่ยวชาญได้เลย  &lt;/p&gt;
 &lt;p&gt;เรียนรู้เรื่องสถาปัตยกรรม ก็น่าสนใจ ถ้าอยากได้บ้านที่มีดีไซน์เป็นของตัวเอง ก็ต้องสร้างขึ้นจากศูนย์ ไม่ถึงกับต้องสร้างเองทุกอย่างหรอก แต่แค่มีความรู้ที่จะไปตรวจงานผู้รับเหมาได้ ก็คุ้มค่าแล้ว นี่ถ้าบังเอิญไปได้ดี สามารถออกแบบภายใน ภายนอกได้เอง ก็จะยิ่งมีประโยชน์, ๑๐ ปี สามารถเรียนจบมหาวิทยาลัย และมีประสบการณ์ทำงานอีก ๖ ปีเลยนะ&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;I’m on a practice of writing in English, if you reader found any grammatical errors please help point it out will be very appreciated.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[On dealing with failures]]></title><description><![CDATA[Failure is a good thing if you handle it well. What — note it down, every single one of them should be listed. Why — find the root cause…]]></description><link>warizz.io/on-dealing-with-failures/</link><guid isPermaLink="false">warizz.io/on-dealing-with-failures/</guid><pubDate>Tue, 18 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Failure is a good thing if you handle it well.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I’m on a practice of writing in English, if you reader found any grammatical errors please help point it out will be very appreciated.&lt;/em&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Dealing with failures]]></title><description><![CDATA[Failure is a good thing if you handle it well. What — note it down, every single one of them should be listed. Why — find the root cause…]]></description><link>warizz.io/on-dealing-with-failures/</link><guid isPermaLink="false">warizz.io/on-dealing-with-failures/</guid><pubDate>Tue, 18 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Failure is a good thing if you handle it well.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;What — note it down, every single one of them should be listed.&lt;/li&gt;
 &lt;li&gt;Why — find the root cause.&lt;/li&gt;
 &lt;li&gt;How — try to think about how to prevent it to happen again in the future.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The key is to learn from your mistake, embrace it. What doesn’t kill you, makes you stronger (yeah, super cliché but true).&lt;/p&gt;</content:encoded></item><item><title><![CDATA[On commute]]></title><description><![CDATA[Listening is the best thing I can think of right now while I’m on commute. Podcast, audio book (Youtube sometimes but annoying when you must…]]></description><link>warizz.io/on-commute/</link><guid isPermaLink="false">warizz.io/on-commute/</guid><pubDate>Sun, 16 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listening is the best thing I can think of right now while I’m on commute. Podcast, audio book (Youtube sometimes but annoying when you must turn on the screen while playing it) have lots of good content to listen.&lt;/p&gt;
+&lt;p&gt;The key is to learn from your mistake, embrace it. What doesn’t kill you, makes you stronger (yeah, super cliché but true).&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What to do during commute]]></title><description><![CDATA[Listening is the best thing I can think of right now while I’m on commute. Podcast, audio book (Youtube sometimes but annoying when you must…]]></description><link>warizz.io/on-commute/</link><guid isPermaLink="false">warizz.io/on-commute/</guid><pubDate>Sun, 16 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listening is the best thing I can think of right now while I’m on commute. Podcast, audio book (Youtube sometimes but annoying when you must turn on the screen while playing it) have lots of good content to listen.&lt;/p&gt;
 &lt;p&gt;Audio book — I’m using Audible, with monthly subscription you get a credit to buy a free book every month. I wish Thai publishers have something like this.&lt;/p&gt;
 &lt;p&gt;Podcast — Here’s the list. I think you can search their name on any podcast app you’re using.&lt;/p&gt;
 &lt;ul&gt;
@@ -139,10 +1562,10 @@ He also gave an super interesting opinion&lt;/p&gt;
 &lt;li&gt;Increase play back speed so you can listen more.&lt;/li&gt;
 &lt;li&gt;Noise cancellation headphone is perfect on public transport.&lt;/li&gt;
 &lt;li&gt;Always bring a book with you, in some situation that you can not use your headphone.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Goals: 2019]]></title><description><![CDATA[I’m turning 35 next year, it passed half life already so I should step forward carefully. Pick what’s really matters and prioritize them, be…]]></description><link>warizz.io/goals-2019/</link><guid isPermaLink="false">warizz.io/goals-2019/</guid><pubDate>Fri, 14 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I’m turning 35 next year, it passed half life already so I should step forward carefully. Pick what’s really matters and prioritize them, be more focus.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Goals (2019)]]></title><description><![CDATA[I’m turning 35 next year, it passed half life already so I should step forward carefully. Pick what’s really matters and prioritize them, be…]]></description><link>warizz.io/goals-2019/</link><guid isPermaLink="false">warizz.io/goals-2019/</guid><pubDate>Fri, 14 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I’m turning 35 next year, it passed half life already so I should step forward carefully. Pick what’s really matters and prioritize them, be more focus.&lt;/p&gt;
 &lt;h2&gt;Work&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Should be improved based on &lt;a href=&quot;http://localhost:8000/on-measuring-work/&quot;&gt;my metrics&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Should be improved based on &lt;a href=&quot;/working-life-metrics&quot;&gt;my metrics&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Learn &lt;code class=&quot;language-text&quot;&gt;Go&lt;/code&gt; — personal interested, Its philosophy feels minimalistic to me.&lt;/li&gt;
 &lt;li&gt;Learn &lt;code class=&quot;language-text&quot;&gt;Kubernetes&lt;/code&gt; — this can improve my workflow when we have so many projects working together these days.&lt;/li&gt;
 &lt;li&gt;Learn &lt;code class=&quot;language-text&quot;&gt;data science&lt;/code&gt;— I think programming world going toward this way, building data-based machine to help us work better.&lt;/li&gt;
@@ -160,8 +1583,8 @@ He also gave an super interesting opinion&lt;/p&gt;
 &lt;h3&gt;Editing history&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;2019-01-01&lt;/strong&gt; Reduce quantity of articles to 52. Instead of writing anything I’m gonna think of reader more that what’re they gonna get from reading my post. It should not be just a personal blog that has no meaning to other people.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[On measuring work]]></title><description><![CDATA[tl;dr  efficiency  and  meaningfulness . Efficiency There are 2 factors for evaluation,  time  and  money . Easiest way to improve is…]]></description><link>warizz.io/on-measuring-work/</link><guid isPermaLink="false">warizz.io/on-measuring-work/</guid><pubDate>Thu, 13 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;tl;dr &lt;strong&gt;efficiency&lt;/strong&gt; and &lt;strong&gt;meaningfulness&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2&gt;Efficiency&lt;/h2&gt;
+&lt;li&gt;&lt;strong&gt;2019-01-03&lt;/strong&gt; Add “Buy less”&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Working life metrics]]></title><description><![CDATA[Efficiency There are 2 factors for evaluation,  time  and  money . Easiest way to improve is growing the value of money/time. Meaningfulness…]]></description><link>warizz.io/working-life-metrics/</link><guid isPermaLink="false">warizz.io/working-life-metrics/</guid><pubDate>Thu, 13 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Efficiency&lt;/h2&gt;
 &lt;p&gt;There are 2 factors for evaluation, &lt;strong&gt;time&lt;/strong&gt; and &lt;strong&gt;money&lt;/strong&gt;. Easiest way to improve is growing the value of money/time.&lt;/p&gt;
 &lt;h2&gt;Meaningfulness&lt;/h2&gt;
 &lt;p&gt;I thought about it for couple of months, and got a rough conclusion that &lt;strong&gt;I care about how many people using my work&lt;/strong&gt; so I will use it as a indicator, google analytics can help you about this. I don’t think this is the best way to measure how meaningful of a work and I will continue finding it.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Working with legacy code: environment variables]]></title><description><![CDATA[Hard-coded environment variables make deployment to another environment very hard because we have to look into the code to find out where…]]></description><link>warizz.io/working-with-legacy-code-environment-variables/</link><guid isPermaLink="false">warizz.io/working-with-legacy-code-environment-variables/</guid><pubDate>Wed, 12 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Hard-coded environment variables make deployment to another environment very hard because we have to look into the code to find out where are all the conditions. It is also not secure because we have to put some API key into the code.&lt;/p&gt;
