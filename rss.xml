@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[warizz.io]]></title><description><![CDATA[All public info of a man named Warizz]]></description><link>warizz.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 19 Apr 2020 02:51:36 GMT</lastBuildDate><item><title><![CDATA[React NextJs and Typescript - What is correct type for a page]]></title><description><![CDATA[This code comes from  NextJs’ documentation  and still valid for latest stable   package]]></description><link>warizz.io/react-nextjs-typescript-page-type/</link><guid isPermaLink="false">warizz.io/react-nextjs-typescript-page-type/</guid><pubDate>Sun, 19 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This code comes from &lt;a href=&quot;https://nextjs.org/learn/excel/typescript/page-types&quot;&gt;NextJs’ documentation&lt;/a&gt; and still valid for latest stable &lt;a href=&quot;https://www.npmjs.com/package/next&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;nextjs&lt;/code&gt; package&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[warizz.io]]></title><description><![CDATA[All public info of a man named Warizz]]></description><link>warizz.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 19 Apr 2020 02:55:41 GMT</lastBuildDate><item><title><![CDATA[React NextJs and Typescript: What is correct type for a page]]></title><description><![CDATA[This code comes from  NextJs’ documentation  and still valid for latest stable   package]]></description><link>warizz.io/react-nextjs-typescript-page-type/</link><guid isPermaLink="false">warizz.io/react-nextjs-typescript-page-type/</guid><pubDate>Sun, 19 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This code comes from &lt;a href=&quot;https://nextjs.org/learn/excel/typescript/page-types&quot;&gt;NextJs’ documentation&lt;/a&gt; and still valid for latest stable &lt;a href=&quot;https://www.npmjs.com/package/next&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;nextjs&lt;/code&gt; package&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; NextPage &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;next&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Home&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; NextPage&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; userAgent&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; userAgent &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -677,497 +677,7 @@ mappedValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; callback
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/11515594/when-should-i-use-unsigned-and-signed-int-in-mysql&quot;&gt;When should I use UNSIGNED and SIGNED INT in MySQL?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/22335853/hack-to-convert-javascript-number-to-uint32&quot;&gt;Hack to convert javascript number to UInt32&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Hiking at Khao San Nok Wua, Kanjanaburi]]></title><description><![CDATA[อ่านภาษาไทย Khao San Nok Wua   (Khao=mountain, San=ridge, Nok=hump and Wua=Cow)  is located within the area of  Khao Lam national park . You…]]></description><link>warizz.io/trip-2019-01-en/</link><guid isPermaLink="false">warizz.io/trip-2019-01-en/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/trip-2019-01-th&quot;&gt;อ่านภาษาไทย&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 36.36000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAYXJchP/xAAYEAADAQEAAAAAAAAAAAAAAAAAAQIDFP/aAAgBAQABBQJbaMW9yddn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BCf/EABcRAQADAAAAAAAAAAAAAAAAAAECEBH/2gAIAQIBAT8BZO1//8QAFxAAAwEAAAAAAAAAAAAAAAAAABAhEf/aAAgBAQAGPwKFxf/EABcQAAMBAAAAAAAAAAAAAAAAAAABEUH/2gAIAQEAAT8hzQirB2w//9oADAMBAAIAAwAAABD0H//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAgBAwEBPxDEYy//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EMhcv//EABsQAQACAgMAAAAAAAAAAAAAAAEAIRFxMYHh/9oACAEBAAE/EKyo6jwLYuZxwjXs/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Nok Yai to Nok Lek&quot;
-        title=&quot;&quot;
-        src=&quot;/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg&quot;
-        srcset=&quot;/static/406983e254cb01645516819881c8ba73/e8976/2019010517094801.jpg 148w,
-/static/406983e254cb01645516819881c8ba73/63df2/2019010517094801.jpg 295w,
-/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg 590w,
-/static/406983e254cb01645516819881c8ba73/85e3d/2019010517094801.jpg 885w,
-/static/406983e254cb01645516819881c8ba73/d1924/2019010517094801.jpg 1180w,
-/static/406983e254cb01645516819881c8ba73/9452e/2019010517094801.jpg 1770w,
-/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Khao San Nok Wua&lt;/strong&gt; &lt;em&gt;(Khao=mountain, San=ridge, Nok=hump and Wua=Cow)&lt;/em&gt; is located within the area of &lt;a href=&quot;https://goo.gl/maps/xTzSjcVfULo&quot;&gt;Khao Lam national park&lt;/a&gt;. You need only 1 and a half day and 1 night for the whole trip (excluded traveling from/to your place). Walking up is not difficult, there are only 2 kms before base camp that are very steep elevation, it took around 3 - 5 hours and not more than half an hour for each of both mountain tops. Camp area is settle around cliff which you can see panorama view of the national park and &lt;a href=&quot;https://goo.gl/maps/nuj4p3adCWG2&quot;&gt;Vajira-longkorn dam&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Booking is not easy if you are foreigners because you have to send some documents to officers and pay register fee beforehand, details are &lt;a href=&quot;https://www.facebook.com/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1-330864760360387/&quot;&gt;here but only in Thai&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;On the appointment date, at &lt;a href=&quot;https://goo.gl/maps/ikhTcSF4qnB2&quot;&gt;Pom Pee view point&lt;/a&gt;, registration open from 8 - 10am. Weigh your belongings if need porters. When everything is ready, officers will bring you to the starting point by truck which takes around 10 minutes.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAc4uBwEf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECESEi/9oACAEBAAEFApbo7Je1U8E/On//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGH/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bp//EABkQAQACAwAAAAAAAAAAAAAAAAEAECEiMf/aAAgBAQAGPwLYmORaa//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExYf/aAAgBAQABPyHjiszTpFRav2V2GxkF9uN+7P/aAAwDAQACAAMAAAAQEz//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qhkf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBj/8QAGxABAQADAQEBAAAAAAAAAAAAAREAIUFRYZH/2gAIAQEAAT8QlgpCAQnz9wtyACOqjd4+KupBlGtGnzOkS+lfcSUCCV7n/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;registration boot&quot;
-        title=&quot;&quot;
-        src=&quot;/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg&quot;
-        srcset=&quot;/static/4234cb228f8699702dcf26db47859908/e8976/2019010509110301.jpg 148w,
-/static/4234cb228f8699702dcf26db47859908/63df2/2019010509110301.jpg 295w,
-/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg 590w,
-/static/4234cb228f8699702dcf26db47859908/85e3d/2019010509110301.jpg 885w,
-/static/4234cb228f8699702dcf26db47859908/d1924/2019010509110301.jpg 1180w,
-/static/4234cb228f8699702dcf26db47859908/9452e/2019010509110301.jpg 1770w,
-/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;Hiking up to base camp is split into 7 rest areas. First is starting point (I will call it No. 0) after that are rest area No. 1 - 5 the last one is camp area. Walking from No. 0 to No. 4 is not difficult but going from No. 4 to camp is quite tiresome because there are some range of the route that are very steep and slippery therefore national park officers has prepared rope to help you go up easier.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 30.84%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZzESD//xAAYEAEAAwEAAAAAAAAAAAAAAAACABETIf/aAAgBAQABBQIGwh3Of//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAEBAAY/AnpUf//EABgQAAMBAQAAAAAAAAAAAAAAAAABESFR/9oACAEBAAE/IVo0rhHQrqP/2gAMAwEAAgADAAAAEHAP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QJ//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxARf//EABkQAQEBAQEBAAAAAAAAAAAAAAERACEx0f/aAAgBAQABPxAjihA843PO77bc3+2//9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;starting point&quot;
-        title=&quot;&quot;
-        src=&quot;/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg&quot;
-        srcset=&quot;/static/549fdeb86303c9b177e33a8727d99962/e8976/2019010509570807.jpg 148w,
-/static/549fdeb86303c9b177e33a8727d99962/63df2/2019010509570807.jpg 295w,
-/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg 590w,
-/static/549fdeb86303c9b177e33a8727d99962/85e3d/2019010509570807.jpg 885w,
-/static/549fdeb86303c9b177e33a8727d99962/d1924/2019010509570807.jpg 1180w,
-/static/549fdeb86303c9b177e33a8727d99962/9452e/2019010509570807.jpg 1770w,
-/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 150.96618357487924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFLIK4iMQ02hdXJhP/EABwQAAIDAAMBAAAAAAAAAAAAAAACAQMREBITIv/aAAgBAQABBQJY0ts+PVoE3LM88FswezskMQNx/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEQETESIP/aAAgBAQAGPwI5Ni3tQh+f/8QAHBABAAMBAQADAAAAAAAAAAAAAQARIUExUaHx/9oACAEBAAE/IWNtsSh72OQoEJz1IcT9I2fPqZHLuURr4IRe9nsiqLs//9oADAMBAAIAAwAAABC44j//xAAWEQEBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQMBAT8QyI//xAAWEQEBAQAAAAAAAAAAAAAAAAARABD/2gAIAQIBAT8QZjP/xAAdEAEBAAMAAgMAAAAAAAAAAAABEQAhMVFhQXGB/9oACAEBAAE/EHRV3T4fP1g3hk5mvfjG5tAh33lG6AfVdYKBARemmIjSVNVN4zHgL8MsgS26hMibLXDNg8uAoXAruf/Z&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;path&quot;
-        title=&quot;&quot;
-        src=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg&quot;
-        srcset=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/e8976/2019010510080809.jpg 148w,
-/static/8a3b1b40e486be5039270a49d64b4e76/63df2/2019010510080809.jpg 295w,
-/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg 590w,
-/static/8a3b1b40e486be5039270a49d64b4e76/85e3d/2019010510080809.jpg 885w,
-/static/8a3b1b40e486be5039270a49d64b4e76/d1924/2019010510080809.jpg 1180w,
-/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg 1656w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 41.28%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAEDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHPJLWD/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECAxET/9oACAEBAAEFApyHVlVt/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAYEAEBAQEBAAAAAAAAAAAAAAABEQAxsf/aAAgBAQABPyFRWdNUmW3m/9oADAMBAAIAAwAAABD4L//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxACwv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABgQAQEBAQEAAAAAAAAAAAAAAAERIQBB/9oACAEBAAE/ELaKBk5x0wIYPYAEA8Hf/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;rest area No. 3&quot;
-        title=&quot;&quot;
-        src=&quot;/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg&quot;
-        srcset=&quot;/static/c5861837a10be248f376cc49437f69a6/e8976/2019010511371017.jpg 148w,
-/static/c5861837a10be248f376cc49437f69a6/63df2/2019010511371017.jpg 295w,
-/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg 590w,
-/static/c5861837a10be248f376cc49437f69a6/85e3d/2019010511371017.jpg 885w,
-/static/c5861837a10be248f376cc49437f69a6/d1924/2019010511371017.jpg 1180w,
-/static/c5861837a10be248f376cc49437f69a6/9452e/2019010511371017.jpg 1770w,
-/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;Took me 3 hours to get to the camp area. We have had to wait for porters to come so we walked to take a look around and find spot for our tents. 10 - 20 minutes later, porters came and set up camp for us. They also brought us gallons of water and asked if we want to make a camp fire.&lt;/p&gt;
-&lt;p&gt;We went there on the weekend so the place were crowded. Officer that came with us said on that day there were tourists around hundred. So think carefully if you don’t want too many people as background in your photos.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAQ0WxGGrP//EABkQAQEAAwEAAAAAAAAAAAAAAAECAAMSEf/aAAgBAQABBQLv017GSlWcK5ltX//EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAEDAQE/AVf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIv/aAAgBAgEBPwFL/8QAHRAAAgAHAQAAAAAAAAAAAAAAAAECEBESISIxYf/aAAgBAQAGPwJK2o9TKhOHsv/EABsQAAMBAQADAAAAAAAAAAAAAAABESFBMVFx/9oACAEBAAE/IWrqi7ZRBYzNLGr4TPRPBtImnSy8H//aAAwDAQACAAMAAAAQiz//xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEx/9oACAEDAQE/ELMY/wD/xAAYEQACAwAAAAAAAAAAAAAAAAAAAREhgf/aAAgBAgEBPxCG7Rs//8QAGxABAAMAAwEAAAAAAAAAAAAAAQARITFBYVH/2gAIAQEAAT8QFyVvdjzvmWBIT1j6VrGuC2qRC1GyPmw/cl3NQeI9vron/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;camp 1&quot;
-        title=&quot;&quot;
-        src=&quot;/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg&quot;
-        srcset=&quot;/static/99211433d548d026cca8eefa2a347dac/e8976/2019010518181809.jpg 148w,
-/static/99211433d548d026cca8eefa2a347dac/63df2/2019010518181809.jpg 295w,
-/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg 590w,
-/static/99211433d548d026cca8eefa2a347dac/85e3d/2019010518181809.jpg 885w,
-/static/99211433d548d026cca8eefa2a347dac/d1924/2019010518181809.jpg 1180w,
-/static/99211433d548d026cca8eefa2a347dac/9452e/2019010518181809.jpg 1770w,
-/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;We rested until 5pm and walked up to see sunset at &lt;strong&gt;Nok Lek&lt;/strong&gt; and &lt;strong&gt;Nok Yai&lt;/strong&gt; &lt;em&gt;(Lek=small and Yai=big)&lt;/em&gt;. Getting to both tops are pretty easy, they are a little bit steep but short. It probably not more than 15 - 20 minutes for each one. Unfortunately, that day is super cloudy and foggy so I couldn’t see both sunset and sunrise but at least I got some pictures of golden hour.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 32.36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAGAIGP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAgEDERMU/9oACAEBAAEFAovfG9kOs//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAwEBPwFQf//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPwF0f//EABgQAQADAQAAAAAAAAAAAAAAAAABMkFR/9oACAEBAAY/AsdUh//EABkQAAIDAQAAAAAAAAAAAAAAAAABEVFxIf/aAAgBAQABPyF2HGIVbSHcv//aAAwDAQACAAMAAAAQ+D//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCCP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAU1v/EABoQAQEAAgMAAAAAAAAAAAAAAAERACExYaH/2gAIAQEAAT8QJKU1gC1Vbzz3Kuw9Of/Z&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Nok Let to Nok Yai&quot;
-        title=&quot;&quot;
-        src=&quot;/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg&quot;
-        srcset=&quot;/static/079fd9bb10b34822e73397b811d078e4/e8976/2019010516533005.jpg 148w,
-/static/079fd9bb10b34822e73397b811d078e4/63df2/2019010516533005.jpg 295w,
-/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg 590w,
-/static/079fd9bb10b34822e73397b811d078e4/85e3d/2019010516533005.jpg 885w,
-/static/079fd9bb10b34822e73397b811d078e4/d1924/2019010516533005.jpg 1180w,
-/static/079fd9bb10b34822e73397b811d078e4/9452e/2019010516533005.jpg 1770w,
-/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGK48VAUT//xAAaEAACAgMAAAAAAAAAAAAAAAABAgAREiEy/9oACAEBAAEFAg4mVwvBydFmN//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAwEBPwHKP//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAgEBPwHSv//EABgQAAMBAQAAAAAAAAAAAAAAAAAQQREy/9oACAEBAAY/AqclWr//xAAbEAACAwADAAAAAAAAAAAAAAAAAREhMUFx4f/aAAgBAQABPyGLEN0P0lgsq4MjRjR//9oADAMBAAIAAwAAABB3H//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/ECH/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxBor//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExUUFhof/aAAgBAQABPxBUk9DGVFC6W8r4PV4wCoUCgS5YKh1b3ziVfnP/2Q==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Nok Lek to camp 1&quot;
-        title=&quot;&quot;
-        src=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg&quot;
-        srcset=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/e8976/2019010517483402.jpg 148w,
-/static/1e50fe23f2d05d1dafaccf13cd9ece95/63df2/2019010517483402.jpg 295w,
-/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg 590w,
-/static/1e50fe23f2d05d1dafaccf13cd9ece95/85e3d/2019010517483402.jpg 885w,
-/static/1e50fe23f2d05d1dafaccf13cd9ece95/d1924/2019010517483402.jpg 1180w,
-/static/1e50fe23f2d05d1dafaccf13cd9ece95/9452e/2019010517483402.jpg 1770w,
-/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 51.12%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAVVxvyyLC//EABkQAAMAAwAAAAAAAAAAAAAAAAABEhATMf/aAAgBAQABBQLeymyxdx//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AbWn/8QAGRAAAQUAAAAAAAAAAAAAAAAAABESIDEy/9oACAEBAAY/AqFaYh//xAAZEAEBAAMBAAAAAAAAAAAAAAABABEhUUH/2gAIAQEAAT8hO5nYZk4xvqVybZXt/9oADAMBAAIAAwAAABBD7//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EAR//8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFHLV//EABwQAAICAgMAAAAAAAAAAAAAAAERACExUUGRof/aAAgBAQABPxBT3hwOeCXUaTjswIEQvcLCSBYceFsbn//Z&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Nok Lek to camp 2&quot;
-        title=&quot;&quot;
-        src=&quot;/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg&quot;
-        srcset=&quot;/static/fe9888931936321122f01fd5f4fc910a/e8976/2019010517514503.jpg 148w,
-/static/fe9888931936321122f01fd5f4fc910a/63df2/2019010517514503.jpg 295w,
-/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg 590w,
-/static/fe9888931936321122f01fd5f4fc910a/85e3d/2019010517514503.jpg 885w,
-/static/fe9888931936321122f01fd5f4fc910a/d1924/2019010517514503.jpg 1180w,
-/static/fe9888931936321122f01fd5f4fc910a/9452e/2019010517514503.jpg 1770w,
-/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHnZeKigT//xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIDERMhQf/aAAgBAQABBQJVRyMthaXGj//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AYf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAIAQIBAT8B0r//xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECIDGR/9oACAEBAAY/AkODVeYf/8QAHBABAAIBBQAAAAAAAAAAAAAAAQARIVFhcYGR/9oACAEBAAE/IdBnaKtp2QIr2h01KHlAtxP/2gAMAwEAAgADAAAAEMAP/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EFZGf//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBZYv/EABsQAQADAQADAAAAAAAAAAAAAAEAESExQWGB/9oACAEBAAE/ECAAOMrcILnwgYvXm1jZJbuTohi32xNw7P/Z&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Nok Lek to camp 3&quot;
-        title=&quot;&quot;
-        src=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg&quot;
-        srcset=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/e8976/2019010517565307.jpg 148w,
-/static/894fc838a7a0764520d3fc480a7b2fc8/63df2/2019010517565307.jpg 295w,
-/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg 590w,
-/static/894fc838a7a0764520d3fc480a7b2fc8/85e3d/2019010517565307.jpg 885w,
-/static/894fc838a7a0764520d3fc480a7b2fc8/d1924/2019010517565307.jpg 1180w,
-/static/894fc838a7a0764520d3fc480a7b2fc8/9452e/2019010517565307.jpg 1770w,
-/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAASXCs0Ucn//EABoQAAICAwAAAAAAAAAAAAAAAAERAAIDIjH/2gAIAQEAAQUCwqaI2DpGTD3/xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8BDJ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAABBQEAAAAAAAAAAAAAAAAAARARISKR/9oACAEBAAY/AtQaVeFNbf/EABkQAAMBAQEAAAAAAAAAAAAAAAABESExcf/aAAgBAQABPyFr1A1eKYtCkM54M49HtanQ/9oADAMBAAIAAwAAABA/7//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCBj//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBdtb//xAAdEAEBAAEEAwAAAAAAAAAAAAABEQAhMUFRYXGR/9oACAEBAAE/EDOJEFrH1zkOoNmHzrlkIOSYZBCamRaoQobY/t1n/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;camp 2&quot;
-        title=&quot;&quot;
-        src=&quot;/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg&quot;
-        srcset=&quot;/static/4da522d48c3b76d5ded9bf772243de67/e8976/2019010518200211.jpg 148w,
-/static/4da522d48c3b76d5ded9bf772243de67/63df2/2019010518200211.jpg 295w,
-/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg 590w,
-/static/4da522d48c3b76d5ded9bf772243de67/85e3d/2019010518200211.jpg 885w,
-/static/4da522d48c3b76d5ded9bf772243de67/d1924/2019010518200211.jpg 1180w,
-/static/4da522d48c3b76d5ded9bf772243de67/9452e/2019010518200211.jpg 1770w,
-/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABw+SyXrJ4f//EABgQAAMBAQAAAAAAAAAAAAAAAAECEQAD/9oACAEBAAEFAkaaqWJ50Ni5l3//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwEn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQQDAAAAAAAAAAAAAAAAAAERICEycaH/2gAIAQEABj8Cti1VtGXIf//EABoQAQEAAwEBAAAAAAAAAAAAAAEAESFRYXH/2gAIAQEAAT8hBGQJUfRIBbVT72wYa7M//9oADAMBAAIAAwAAABATL//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxAGWF//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8QVbW//8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUXGB/9oACAEBAAE/EKVQ3SxVl6pOOpmBbYUz7c4cBfqXq1iO+4i6W++z/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;camp 3&quot;
-        title=&quot;&quot;
-        src=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg&quot;
-        srcset=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/e8976/2019010518230714.jpg 148w,
-/static/c3f5d7ae8216b2b82203bf05aebae0f0/63df2/2019010518230714.jpg 295w,
-/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg 590w,
-/static/c3f5d7ae8216b2b82203bf05aebae0f0/85e3d/2019010518230714.jpg 885w,
-/static/c3f5d7ae8216b2b82203bf05aebae0f0/d1924/2019010518230714.jpg 1180w,
-/static/c3f5d7ae8216b2b82203bf05aebae0f0/9452e/2019010518230714.jpg 1770w,
-/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;The worst part of this trip was in the night. Our tent was in pretty bad condition and when it got the impact of very strong wind it collapsed, poles were pulled out of the ground. Thanks to officers for helping us fixed the tent. One of them said to me in the next morning that the wind was strongest compare to the days before (may be because of the big storm named Pa-Buk around the southern of Thailand that time) and after they fixed our tent, they went around and fixed other people’s until 2am. I couldn’t imagine how mess it going to be if there was raining that night.&lt;/p&gt;
-&lt;p&gt;Walking down from the camp is not as hard as walking up. There will be officers and trucks waiting for bringing to back to Pom Pee view point.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGPM9EIFlf/xAAZEAEBAAMBAAAAAAAAAAAAAAABAgAQEiL/2gAIAQEAAQUCi+ZZV1T4z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAEQABFR/9oACAEBAAY/Aq2Fhf/EABsQAAICAwEAAAAAAAAAAAAAAAARATEhQVFh/9oACAEBAAE/IYZaKjMj9KOE1+hn/9oADAMBAAIAAwAAABDvD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB4QAQACAgEFAAAAAAAAAAAAAAEAESFBMVFxkaHB/9oACAEBAAE/EFXaSx11fmOClba4jmi+pvv+wCCFV1vMsrbP/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;walking back 1&quot;
-        title=&quot;&quot;
-        src=&quot;/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg&quot;
-        srcset=&quot;/static/2b1234dde647f6d94d7f1309888627fc/e8976/2019010608470406.jpg 148w,
-/static/2b1234dde647f6d94d7f1309888627fc/63df2/2019010608470406.jpg 295w,
-/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg 590w,
-/static/2b1234dde647f6d94d7f1309888627fc/85e3d/2019010608470406.jpg 885w,
-/static/2b1234dde647f6d94d7f1309888627fc/d1924/2019010608470406.jpg 1180w,
-/static/2b1234dde647f6d94d7f1309888627fc/9452e/2019010608470406.jpg 1770w,
-/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg 2500w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;Back at Pom Pee, we returned a rental tent and got a pin with the national park logo because we brought a trash bag weight more 1.5 kms back. Toilets and bath rooms are pretty neat and clean so we took a shower that we didn’t last night. We headed back to Bangkok around 1pm and that’s the end of the adventure.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[เขาสันหนอกวัว, กาญจนบุรี]]></title><description><![CDATA[See English version…]]></description><link>warizz.io/trip-2019-01-th/</link><guid isPermaLink="false">warizz.io/trip-2019-01-th/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/trip-2019-01-en&quot;&gt;See English version&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[เขาสันหนอกวัว, กาญจนบุรี]]></title><description><![CDATA[See English version…]]></description><link>warizz.io/trip-2019-01-th/</link><guid isPermaLink="false">warizz.io/trip-2019-01-th/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/trip-2019-01-en&quot;&gt;See English version&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1657,7 +1167,497 @@ mappedValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; callback
   
   &lt;/a&gt;
     &lt;/p&gt;
-&lt;p&gt;ถึงป้อมปี่ก็คืนเตนท์ ถ้าเอาขยะกลับลงมาแล้วนำไปชั่งได้หนักเกิน 1.5 กิโลกรัม จะได้เข็มกลัดเป็นรางวัล ห้องน้ำของทางอุทยานก็ทำไว้อย่างดี ถ่ายสะดวก อาบน้ำสบาย ธุระเสร็จครบก็เก็บของกลับ กทม. เป็นอันจบทริป&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reading other people's code episode 1: _.get]]></title><description><![CDATA[I will begin this series with   which I used most often compare to all Lodash’s functions. This is entire code of the function. It begins…]]></description><link>warizz.io/reading-other-people-code-ep-1/</link><guid isPermaLink="false">warizz.io/reading-other-people-code-ep-1/</guid><pubDate>Wed, 09 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I will begin this series with &lt;a href=&quot;https://lodash.com/docs/4.17.11#get&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;_.get&lt;/code&gt;&lt;/a&gt; which I used most often compare to all Lodash’s functions.&lt;/p&gt;
+&lt;p&gt;ถึงป้อมปี่ก็คืนเตนท์ ถ้าเอาขยะกลับลงมาแล้วนำไปชั่งได้หนักเกิน 1.5 กิโลกรัม จะได้เข็มกลัดเป็นรางวัล ห้องน้ำของทางอุทยานก็ทำไว้อย่างดี ถ่ายสะดวก อาบน้ำสบาย ธุระเสร็จครบก็เก็บของกลับ กทม. เป็นอันจบทริป&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hiking at Khao San Nok Wua, Kanjanaburi]]></title><description><![CDATA[อ่านภาษาไทย Khao San Nok Wua   (Khao=mountain, San=ridge, Nok=hump and Wua=Cow)  is located within the area of  Khao Lam national park . You…]]></description><link>warizz.io/trip-2019-01-en/</link><guid isPermaLink="false">warizz.io/trip-2019-01-en/</guid><pubDate>Mon, 14 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/trip-2019-01-th&quot;&gt;อ่านภาษาไทย&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.36000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAYXJchP/xAAYEAADAQEAAAAAAAAAAAAAAAAAAQIDFP/aAAgBAQABBQJbaMW9yddn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BCf/EABcRAQADAAAAAAAAAAAAAAAAAAECEBH/2gAIAQIBAT8BZO1//8QAFxAAAwEAAAAAAAAAAAAAAAAAABAhEf/aAAgBAQAGPwKFxf/EABcQAAMBAAAAAAAAAAAAAAAAAAABEUH/2gAIAQEAAT8hzQirB2w//9oADAMBAAIAAwAAABD0H//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAgBAwEBPxDEYy//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EMhcv//EABsQAQACAgMAAAAAAAAAAAAAAAEAIRFxMYHh/9oACAEBAAE/EKyo6jwLYuZxwjXs/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Yai to Nok Lek&quot;
+        title=&quot;&quot;
+        src=&quot;/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg&quot;
+        srcset=&quot;/static/406983e254cb01645516819881c8ba73/e8976/2019010517094801.jpg 148w,
+/static/406983e254cb01645516819881c8ba73/63df2/2019010517094801.jpg 295w,
+/static/406983e254cb01645516819881c8ba73/f8fb9/2019010517094801.jpg 590w,
+/static/406983e254cb01645516819881c8ba73/85e3d/2019010517094801.jpg 885w,
+/static/406983e254cb01645516819881c8ba73/d1924/2019010517094801.jpg 1180w,
+/static/406983e254cb01645516819881c8ba73/9452e/2019010517094801.jpg 1770w,
+/static/406983e254cb01645516819881c8ba73/c5651/2019010517094801.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Khao San Nok Wua&lt;/strong&gt; &lt;em&gt;(Khao=mountain, San=ridge, Nok=hump and Wua=Cow)&lt;/em&gt; is located within the area of &lt;a href=&quot;https://goo.gl/maps/xTzSjcVfULo&quot;&gt;Khao Lam national park&lt;/a&gt;. You need only 1 and a half day and 1 night for the whole trip (excluded traveling from/to your place). Walking up is not difficult, there are only 2 kms before base camp that are very steep elevation, it took around 3 - 5 hours and not more than half an hour for each of both mountain tops. Camp area is settle around cliff which you can see panorama view of the national park and &lt;a href=&quot;https://goo.gl/maps/nuj4p3adCWG2&quot;&gt;Vajira-longkorn dam&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Booking is not easy if you are foreigners because you have to send some documents to officers and pay register fee beforehand, details are &lt;a href=&quot;https://www.facebook.com/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1-330864760360387/&quot;&gt;here but only in Thai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On the appointment date, at &lt;a href=&quot;https://goo.gl/maps/ikhTcSF4qnB2&quot;&gt;Pom Pee view point&lt;/a&gt;, registration open from 8 - 10am. Weigh your belongings if need porters. When everything is ready, officers will bring you to the starting point by truck which takes around 10 minutes.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAc4uBwEf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECESEi/9oACAEBAAEFApbo7Je1U8E/On//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGH/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bp//EABkQAQACAwAAAAAAAAAAAAAAAAEAECEiMf/aAAgBAQAGPwLYmORaa//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExYf/aAAgBAQABPyHjiszTpFRav2V2GxkF9uN+7P/aAAwDAQACAAMAAAAQEz//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qhkf/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBj/8QAGxABAQADAQEBAAAAAAAAAAAAAREAIUFRYZH/2gAIAQEAAT8QlgpCAQnz9wtyACOqjd4+KupBlGtGnzOkS+lfcSUCCV7n/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;registration boot&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg&quot;
+        srcset=&quot;/static/4234cb228f8699702dcf26db47859908/e8976/2019010509110301.jpg 148w,
+/static/4234cb228f8699702dcf26db47859908/63df2/2019010509110301.jpg 295w,
+/static/4234cb228f8699702dcf26db47859908/f8fb9/2019010509110301.jpg 590w,
+/static/4234cb228f8699702dcf26db47859908/85e3d/2019010509110301.jpg 885w,
+/static/4234cb228f8699702dcf26db47859908/d1924/2019010509110301.jpg 1180w,
+/static/4234cb228f8699702dcf26db47859908/9452e/2019010509110301.jpg 1770w,
+/static/4234cb228f8699702dcf26db47859908/c5651/2019010509110301.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Hiking up to base camp is split into 7 rest areas. First is starting point (I will call it No. 0) after that are rest area No. 1 - 5 the last one is camp area. Walking from No. 0 to No. 4 is not difficult but going from No. 4 to camp is quite tiresome because there are some range of the route that are very steep and slippery therefore national park officers has prepared rope to help you go up easier.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.84%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZzESD//xAAYEAEAAwEAAAAAAAAAAAAAAAACABETIf/aAAgBAQABBQIGwh3Of//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAEBAAY/AnpUf//EABgQAAMBAQAAAAAAAAAAAAAAAAABESFR/9oACAEBAAE/IVo0rhHQrqP/2gAMAwEAAgADAAAAEHAP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QJ//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxARf//EABkQAQEBAQEBAAAAAAAAAAAAAAERACEx0f/aAAgBAQABPxAjihA843PO77bc3+2//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;starting point&quot;
+        title=&quot;&quot;
+        src=&quot;/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg&quot;
+        srcset=&quot;/static/549fdeb86303c9b177e33a8727d99962/e8976/2019010509570807.jpg 148w,
+/static/549fdeb86303c9b177e33a8727d99962/63df2/2019010509570807.jpg 295w,
+/static/549fdeb86303c9b177e33a8727d99962/f8fb9/2019010509570807.jpg 590w,
+/static/549fdeb86303c9b177e33a8727d99962/85e3d/2019010509570807.jpg 885w,
+/static/549fdeb86303c9b177e33a8727d99962/d1924/2019010509570807.jpg 1180w,
+/static/549fdeb86303c9b177e33a8727d99962/9452e/2019010509570807.jpg 1770w,
+/static/549fdeb86303c9b177e33a8727d99962/c5651/2019010509570807.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 150.96618357487924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFLIK4iMQ02hdXJhP/EABwQAAIDAAMBAAAAAAAAAAAAAAACAQMREBITIv/aAAgBAQABBQJY0ts+PVoE3LM88FswezskMQNx/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAEQETESIP/aAAgBAQAGPwI5Ni3tQh+f/8QAHBABAAMBAQADAAAAAAAAAAAAAQARIUExUaHx/9oACAEBAAE/IWNtsSh72OQoEJz1IcT9I2fPqZHLuURr4IRe9nsiqLs//9oADAMBAAIAAwAAABC44j//xAAWEQEBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQMBAT8QyI//xAAWEQEBAQAAAAAAAAAAAAAAAAARABD/2gAIAQIBAT8QZjP/xAAdEAEBAAMAAgMAAAAAAAAAAAABEQAhMVFhQXGB/9oACAEBAAE/EHRV3T4fP1g3hk5mvfjG5tAh33lG6AfVdYKBARemmIjSVNVN4zHgL8MsgS26hMibLXDNg8uAoXAruf/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;path&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg&quot;
+        srcset=&quot;/static/8a3b1b40e486be5039270a49d64b4e76/e8976/2019010510080809.jpg 148w,
+/static/8a3b1b40e486be5039270a49d64b4e76/63df2/2019010510080809.jpg 295w,
+/static/8a3b1b40e486be5039270a49d64b4e76/f8fb9/2019010510080809.jpg 590w,
+/static/8a3b1b40e486be5039270a49d64b4e76/85e3d/2019010510080809.jpg 885w,
+/static/8a3b1b40e486be5039270a49d64b4e76/d1924/2019010510080809.jpg 1180w,
+/static/8a3b1b40e486be5039270a49d64b4e76/f66e2/2019010510080809.jpg 1656w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.28%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAEDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHPJLWD/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECAxET/9oACAEBAAEFApyHVlVt/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAYEAEBAQEBAAAAAAAAAAAAAAABEQAxsf/aAAgBAQABPyFRWdNUmW3m/9oADAMBAAIAAwAAABD4L//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxACwv/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABgQAQEBAQEAAAAAAAAAAAAAAAERIQBB/9oACAEBAAE/ELaKBk5x0wIYPYAEA8Hf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;rest area No. 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg&quot;
+        srcset=&quot;/static/c5861837a10be248f376cc49437f69a6/e8976/2019010511371017.jpg 148w,
+/static/c5861837a10be248f376cc49437f69a6/63df2/2019010511371017.jpg 295w,
+/static/c5861837a10be248f376cc49437f69a6/f8fb9/2019010511371017.jpg 590w,
+/static/c5861837a10be248f376cc49437f69a6/85e3d/2019010511371017.jpg 885w,
+/static/c5861837a10be248f376cc49437f69a6/d1924/2019010511371017.jpg 1180w,
+/static/c5861837a10be248f376cc49437f69a6/9452e/2019010511371017.jpg 1770w,
+/static/c5861837a10be248f376cc49437f69a6/c5651/2019010511371017.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Took me 3 hours to get to the camp area. We have had to wait for porters to come so we walked to take a look around and find spot for our tents. 10 - 20 minutes later, porters came and set up camp for us. They also brought us gallons of water and asked if we want to make a camp fire.&lt;/p&gt;
+&lt;p&gt;We went there on the weekend so the place were crowded. Officer that came with us said on that day there were tourists around hundred. So think carefully if you don’t want too many people as background in your photos.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAQ0WxGGrP//EABkQAQEAAwEAAAAAAAAAAAAAAAECAAMSEf/aAAgBAQABBQLv017GSlWcK5ltX//EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAEDAQE/AVf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIv/aAAgBAgEBPwFL/8QAHRAAAgAHAQAAAAAAAAAAAAAAAAECEBESISIxYf/aAAgBAQAGPwJK2o9TKhOHsv/EABsQAAMBAQADAAAAAAAAAAAAAAABESFBMVFx/9oACAEBAAE/IWrqi7ZRBYzNLGr4TPRPBtImnSy8H//aAAwDAQACAAMAAAAQiz//xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEx/9oACAEDAQE/ELMY/wD/xAAYEQACAwAAAAAAAAAAAAAAAAAAAREhgf/aAAgBAgEBPxCG7Rs//8QAGxABAAMAAwEAAAAAAAAAAAAAAQARITFBYVH/2gAIAQEAAT8QFyVvdjzvmWBIT1j6VrGuC2qRC1GyPmw/cl3NQeI9vron/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;camp 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg&quot;
+        srcset=&quot;/static/99211433d548d026cca8eefa2a347dac/e8976/2019010518181809.jpg 148w,
+/static/99211433d548d026cca8eefa2a347dac/63df2/2019010518181809.jpg 295w,
+/static/99211433d548d026cca8eefa2a347dac/f8fb9/2019010518181809.jpg 590w,
+/static/99211433d548d026cca8eefa2a347dac/85e3d/2019010518181809.jpg 885w,
+/static/99211433d548d026cca8eefa2a347dac/d1924/2019010518181809.jpg 1180w,
+/static/99211433d548d026cca8eefa2a347dac/9452e/2019010518181809.jpg 1770w,
+/static/99211433d548d026cca8eefa2a347dac/c5651/2019010518181809.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We rested until 5pm and walked up to see sunset at &lt;strong&gt;Nok Lek&lt;/strong&gt; and &lt;strong&gt;Nok Yai&lt;/strong&gt; &lt;em&gt;(Lek=small and Yai=big)&lt;/em&gt;. Getting to both tops are pretty easy, they are a little bit steep but short. It probably not more than 15 - 20 minutes for each one. Unfortunately, that day is super cloudy and foggy so I couldn’t see both sunset and sunrise but at least I got some pictures of golden hour.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 32.36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAGAIGP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAgEDERMU/9oACAEBAAEFAovfG9kOs//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAwEBPwFQf//EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPwF0f//EABgQAQADAQAAAAAAAAAAAAAAAAABMkFR/9oACAEBAAY/AsdUh//EABkQAAIDAQAAAAAAAAAAAAAAAAABEVFxIf/aAAgBAQABPyF2HGIVbSHcv//aAAwDAQACAAMAAAAQ+D//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCCP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAU1v/EABoQAQEAAgMAAAAAAAAAAAAAAAERACExYaH/2gAIAQEAAT8QJKU1gC1Vbzz3Kuw9Of/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Let to Nok Yai&quot;
+        title=&quot;&quot;
+        src=&quot;/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg&quot;
+        srcset=&quot;/static/079fd9bb10b34822e73397b811d078e4/e8976/2019010516533005.jpg 148w,
+/static/079fd9bb10b34822e73397b811d078e4/63df2/2019010516533005.jpg 295w,
+/static/079fd9bb10b34822e73397b811d078e4/f8fb9/2019010516533005.jpg 590w,
+/static/079fd9bb10b34822e73397b811d078e4/85e3d/2019010516533005.jpg 885w,
+/static/079fd9bb10b34822e73397b811d078e4/d1924/2019010516533005.jpg 1180w,
+/static/079fd9bb10b34822e73397b811d078e4/9452e/2019010516533005.jpg 1770w,
+/static/079fd9bb10b34822e73397b811d078e4/c5651/2019010516533005.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGK48VAUT//xAAaEAACAgMAAAAAAAAAAAAAAAABAgAREiEy/9oACAEBAAEFAg4mVwvBydFmN//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAwEBPwHKP//EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAgBAgEBPwHSv//EABgQAAMBAQAAAAAAAAAAAAAAAAAQQREy/9oACAEBAAY/AqclWr//xAAbEAACAwADAAAAAAAAAAAAAAAAAREhMUFx4f/aAAgBAQABPyGLEN0P0lgsq4MjRjR//9oADAMBAAIAAwAAABB3H//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/ECH/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxBor//EABwQAQEAAgIDAAAAAAAAAAAAAAERACExUUFhof/aAAgBAQABPxBUk9DGVFC6W8r4PV4wCoUCgS5YKh1b3ziVfnP/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Lek to camp 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg&quot;
+        srcset=&quot;/static/1e50fe23f2d05d1dafaccf13cd9ece95/e8976/2019010517483402.jpg 148w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/63df2/2019010517483402.jpg 295w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/f8fb9/2019010517483402.jpg 590w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/85e3d/2019010517483402.jpg 885w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/d1924/2019010517483402.jpg 1180w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/9452e/2019010517483402.jpg 1770w,
+/static/1e50fe23f2d05d1dafaccf13cd9ece95/c5651/2019010517483402.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 51.12%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAVVxvyyLC//EABkQAAMAAwAAAAAAAAAAAAAAAAABEhATMf/aAAgBAQABBQLeymyxdx//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AbWn/8QAGRAAAQUAAAAAAAAAAAAAAAAAABESIDEy/9oACAEBAAY/AqFaYh//xAAZEAEBAAMBAAAAAAAAAAAAAAABABEhUUH/2gAIAQEAAT8hO5nYZk4xvqVybZXt/9oADAMBAAIAAwAAABBD7//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EAR//8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFHLV//EABwQAAICAgMAAAAAAAAAAAAAAAERACExUUGRof/aAAgBAQABPxBT3hwOeCXUaTjswIEQvcLCSBYceFsbn//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Lek to camp 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg&quot;
+        srcset=&quot;/static/fe9888931936321122f01fd5f4fc910a/e8976/2019010517514503.jpg 148w,
+/static/fe9888931936321122f01fd5f4fc910a/63df2/2019010517514503.jpg 295w,
+/static/fe9888931936321122f01fd5f4fc910a/f8fb9/2019010517514503.jpg 590w,
+/static/fe9888931936321122f01fd5f4fc910a/85e3d/2019010517514503.jpg 885w,
+/static/fe9888931936321122f01fd5f4fc910a/d1924/2019010517514503.jpg 1180w,
+/static/fe9888931936321122f01fd5f4fc910a/9452e/2019010517514503.jpg 1770w,
+/static/fe9888931936321122f01fd5f4fc910a/c5651/2019010517514503.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHnZeKigT//xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIDERMhQf/aAAgBAQABBQJVRyMthaXGj//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AYf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAIAQIBAT8B0r//xAAaEAACAgMAAAAAAAAAAAAAAAAAIQECIDGR/9oACAEBAAY/AkODVeYf/8QAHBABAAIBBQAAAAAAAAAAAAAAAQARIVFhcYGR/9oACAEBAAE/IdBnaKtp2QIr2h01KHlAtxP/2gAMAwEAAgADAAAAEMAP/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EFZGf//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBZYv/EABsQAQADAQADAAAAAAAAAAAAAAEAESExQWGB/9oACAEBAAE/ECAAOMrcILnwgYvXm1jZJbuTohi32xNw7P/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nok Lek to camp 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg&quot;
+        srcset=&quot;/static/894fc838a7a0764520d3fc480a7b2fc8/e8976/2019010517565307.jpg 148w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/63df2/2019010517565307.jpg 295w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/f8fb9/2019010517565307.jpg 590w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/85e3d/2019010517565307.jpg 885w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/d1924/2019010517565307.jpg 1180w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/9452e/2019010517565307.jpg 1770w,
+/static/894fc838a7a0764520d3fc480a7b2fc8/c5651/2019010517565307.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAASXCs0Ucn//EABoQAAICAwAAAAAAAAAAAAAAAAERAAIDIjH/2gAIAQEAAQUCwqaI2DpGTD3/xAAWEQEBAQAAAAAAAAAAAAAAAAABECH/2gAIAQMBAT8BDJ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAABBQEAAAAAAAAAAAAAAAAAARARISKR/9oACAEBAAY/AtQaVeFNbf/EABkQAAMBAQEAAAAAAAAAAAAAAAABESExcf/aAAgBAQABPyFr1A1eKYtCkM54M49HtanQ/9oADAMBAAIAAwAAABA/7//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCBj//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBdtb//xAAdEAEBAAEEAwAAAAAAAAAAAAABEQAhMUFRYXGR/9oACAEBAAE/EDOJEFrH1zkOoNmHzrlkIOSYZBCamRaoQobY/t1n/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;camp 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg&quot;
+        srcset=&quot;/static/4da522d48c3b76d5ded9bf772243de67/e8976/2019010518200211.jpg 148w,
+/static/4da522d48c3b76d5ded9bf772243de67/63df2/2019010518200211.jpg 295w,
+/static/4da522d48c3b76d5ded9bf772243de67/f8fb9/2019010518200211.jpg 590w,
+/static/4da522d48c3b76d5ded9bf772243de67/85e3d/2019010518200211.jpg 885w,
+/static/4da522d48c3b76d5ded9bf772243de67/d1924/2019010518200211.jpg 1180w,
+/static/4da522d48c3b76d5ded9bf772243de67/9452e/2019010518200211.jpg 1770w,
+/static/4da522d48c3b76d5ded9bf772243de67/c5651/2019010518200211.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABw+SyXrJ4f//EABgQAAMBAQAAAAAAAAAAAAAAAAECEQAD/9oACAEBAAEFAkaaqWJ50Ni5l3//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwEn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAQQDAAAAAAAAAAAAAAAAAAERICEycaH/2gAIAQEABj8Cti1VtGXIf//EABoQAQEAAwEBAAAAAAAAAAAAAAEAESFRYXH/2gAIAQEAAT8hBGQJUfRIBbVT72wYa7M//9oADAMBAAIAAwAAABATL//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxAGWF//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8QVbW//8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUXGB/9oACAEBAAE/EKVQ3SxVl6pOOpmBbYUz7c4cBfqXq1iO+4i6W++z/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;camp 3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg&quot;
+        srcset=&quot;/static/c3f5d7ae8216b2b82203bf05aebae0f0/e8976/2019010518230714.jpg 148w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/63df2/2019010518230714.jpg 295w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/f8fb9/2019010518230714.jpg 590w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/85e3d/2019010518230714.jpg 885w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/d1924/2019010518230714.jpg 1180w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/9452e/2019010518230714.jpg 1770w,
+/static/c3f5d7ae8216b2b82203bf05aebae0f0/c5651/2019010518230714.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The worst part of this trip was in the night. Our tent was in pretty bad condition and when it got the impact of very strong wind it collapsed, poles were pulled out of the ground. Thanks to officers for helping us fixed the tent. One of them said to me in the next morning that the wind was strongest compare to the days before (may be because of the big storm named Pa-Buk around the southern of Thailand that time) and after they fixed our tent, they went around and fixed other people’s until 2am. I couldn’t imagine how mess it going to be if there was raining that night.&lt;/p&gt;
+&lt;p&gt;Walking down from the camp is not as hard as walking up. There will be officers and trucks waiting for bringing to back to Pom Pee view point.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.24%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGPM9EIFlf/xAAZEAEBAAMBAAAAAAAAAAAAAAABAgAQEiL/2gAIAQEAAQUCi+ZZV1T4z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAEQABFR/9oACAEBAAY/Aq2Fhf/EABsQAAICAwEAAAAAAAAAAAAAAAARATEhQVFh/9oACAEBAAE/IYZaKjMj9KOE1+hn/9oADAMBAAIAAwAAABDvD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB4QAQACAgEFAAAAAAAAAAAAAAEAESFBMVFxkaHB/9oACAEBAAE/EFXaSx11fmOClba4jmi+pvv+wCCFV1vMsrbP/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;walking back 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg&quot;
+        srcset=&quot;/static/2b1234dde647f6d94d7f1309888627fc/e8976/2019010608470406.jpg 148w,
+/static/2b1234dde647f6d94d7f1309888627fc/63df2/2019010608470406.jpg 295w,
+/static/2b1234dde647f6d94d7f1309888627fc/f8fb9/2019010608470406.jpg 590w,
+/static/2b1234dde647f6d94d7f1309888627fc/85e3d/2019010608470406.jpg 885w,
+/static/2b1234dde647f6d94d7f1309888627fc/d1924/2019010608470406.jpg 1180w,
+/static/2b1234dde647f6d94d7f1309888627fc/9452e/2019010608470406.jpg 1770w,
+/static/2b1234dde647f6d94d7f1309888627fc/c5651/2019010608470406.jpg 2500w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Back at Pom Pee, we returned a rental tent and got a pin with the national park logo because we brought a trash bag weight more 1.5 kms back. Toilets and bath rooms are pretty neat and clean so we took a shower that we didn’t last night. We headed back to Bangkok around 1pm and that’s the end of the adventure.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reading other people's code episode 1: _.get]]></title><description><![CDATA[I will begin this series with   which I used most often compare to all Lodash’s functions. This is entire code of the function. It begins…]]></description><link>warizz.io/reading-other-people-code-ep-1/</link><guid isPermaLink="false">warizz.io/reading-other-people-code-ep-1/</guid><pubDate>Wed, 09 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I will begin this series with &lt;a href=&quot;https://lodash.com/docs/4.17.11#get&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;_.get&lt;/code&gt;&lt;/a&gt; which I used most often compare to all Lodash’s functions.&lt;/p&gt;
 &lt;p&gt;This is entire code of the function.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
     * Gets the value at `path` of `object`. If the resolved value is
